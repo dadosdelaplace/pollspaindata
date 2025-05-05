@@ -4,6 +4,13 @@
 \alias{recod_parties}
 \title{Recoding Spanish political party or candidacies names and
 preprocessing of acronyms}
+\usage{
+recod_parties(
+  parties_data,
+  col_acronym = "abbrev_candidacies",
+  col_full_name = "name_candidacies"
+)
+}
 \arguments{
 \item{parties_data}{A dataset (preferably a tibble) containing
 political party data. Function will expect a dataset with 2 columns
