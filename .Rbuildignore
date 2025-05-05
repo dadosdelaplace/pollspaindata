@@ -7,3 +7,8 @@
 ^LICENSE\.md$
 ^pkgdown$
 ^\.github$
+^\\.git$
+^\\.gitignore$
+^\\.Rhistory$
+^\\.RData$
+^\\.Rbuildignore$
