@@ -277,7 +277,7 @@ recod_mun <- function(mun_data) {
 #' }
 #'
 #' @export
-utils::globalVariables(c("abbrev_candidacies", "name_candidacies"))
+
 recod_parties <-
   function(parties_data, col_acronym = "abbrev_candidacies", col_full_name = "name_candidacies") {
 
