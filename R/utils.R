@@ -20,8 +20,8 @@
 #'   \item \code{"07"}: European Parlament elections.
 #' }
 #'
-#' @author Javier Álvarez-Liébana, David Pereiro-Pol, Mafalda
-#' González-González and Irene Bosque-Gala.
+#' @author Javier Alvarez-Liebana, David Pereiro-Pol, Mafalda
+#' Gonzalez-Gonzalez and Irene Bosque-Gala.
 #' @source Data extracted from
 #' \url{https://infoelectoral.interior.gob.es/opencms/es/elecciones-celebradas/area-de-descargas/}{Spanish Ministry of Interior}
 #' @keywords utils
@@ -54,7 +54,7 @@ type_to_code_election <- function(type_elec) {
         c("referendum", "congress", "senate", "local", "regional",
           "cabildo", "EU"))) {
 
-    stop(red("😵 Input argument type_elec is not valid: it must be taken one of the following values: 'referendum', 'congress',  'senate', 'local', 'cabildo' or 'EU'"))
+    stop(red("!! Input argument type_elec is not valid: it must be taken one of the following values: 'referendum', 'congress',  'senate', 'local', 'cabildo' or 'EU'"))
 
   }
 
@@ -93,8 +93,8 @@ type_to_code_election <- function(type_elec) {
 #' @return A string code subtract from the whole code the properly id
 #' for the aggregation level required.
 #'
-#' @author Javier Álvarez-Liébana, David Pereiro-Pol, Mafalda
-#' González-González and Irene Bosque-Gala.
+#' @author Javier Alvarez-Liebana, David Pereiro-Pol, Mafalda
+#' Gonzalez-Gonzalez and Irene Bosque-Gala.
 #' @keywords utils
 #' @name extract_code
 #' @import dplyr
@@ -138,21 +138,21 @@ extract_code <-
           all(between(nchar(id_INE_poll_station), 18, 19)) &
           length(str_extract_all(id_INE_poll_station, "-")[[1]]) == 5)) {
 
-      stop(red("😵 Argument 'id_INE_poll_station' must be a string of 18-19 characters with 5 '-' according to the INE format"))
+      stop(red("!! Argument 'id_INE_poll_station' must be a string of 18-19 characters with 5 '-' according to the INE format"))
     }
 
     # Check: if level takes an allowed value
     if (!(level %in% c("ccaa", "prov", "mun", "mun_district",
                        "sec", "poll_station"))) {
 
-      stop(red("😵 Aggregation level provided by 'level' parameter must be taken from the following values: 'ccaa', 'prov', 'mun', 'mun-district', 'sec', 'poll_station'"))
+      stop(red("!! Aggregation level provided by 'level' parameter must be taken from the following values: 'ccaa', 'prov', 'mun', 'mun_district', 'sec', 'poll_station'"))
 
     }
 
     # Check: if full_codi is a logical variable
     if (!is.logical(full_cod)) {
 
-      stop(red("😵 Parameter 'full_cod' must be a logical variable, just TRUE/FALSE are avoided"))
+      stop(red("!! Parameter 'full_cod' must be a logical variable, just TRUE/FALSE are avoided"))
 
     }
 
@@ -260,8 +260,8 @@ recod_mun <- function(mun_data) {
 #' the function applies a series of pattern-matching rules to recode
 #' specific party names and abbreviations to standardized versions.
 #'
-#' @author Javier Álvarez-Liébana, David Pereiro-Pol, Mafalda
-#' González-González and Irene Bosque-Gala.
+#' @author Javier Alvarez-Liebana, David Pereiro-Pol, Mafalda
+#' Gonzalez-Gonzalez and Irene Bosque-Gala.
 #' @keywords utils
 #' @name recod_parties
 #' @import dplyr
@@ -285,13 +285,13 @@ recod_parties <-
     if (!is.character(col_acronym) ||
         !is.character(col_full_name)) {
 
-      stop(red("😵 Parameters 'col_acronym' and 'col_full_name' must be character"))
+      stop(red("!! Parameters 'col_acronym' and 'col_full_name' must be character"))
     }
 
     # Check if parties_data contains at least two required columns
     if (!(col_acronym %in% names(parties_data) & col_full_name %in% names(parties_data))) {
 
-      stop(red("😵 Data must contain two column with the same names as indicated in 'col_acronym' and 'col_full_name'"))
+      stop(red("!! Data must contain two column with the same names as indicated in 'col_acronym' and 'col_full_name'"))
 
     }
 
@@ -306,7 +306,7 @@ recod_parties <-
     # General Cleanup
     parties_data <-
       parties_data |>
-      # Remove ' and ´ and . and , and "
+      # Remove tildes and quotes
       mutate("abbrev_candidacies" = str_remove_all(abbrev_candidacies, "'|\\.|\\,|´"),
              "abbrev_candidacies" = str_remove_all(abbrev_candidacies, '\\"')) |>
       # Trimming. Reformat -. Translate to Latin-ASCIII (remove tildes)
