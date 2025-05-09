@@ -424,7 +424,6 @@ import_poll_stations_MIR_files <-
     } else {
 
       date <- as_date(date)
-      year <- year(date)
       if (is.na(date)) {
         stop(red("😵 If date was provided, `date` should be in format '2000-01-01' (%Y-%m-%d)"))
       }
@@ -478,14 +477,32 @@ import_poll_stations_MIR_files <-
       mutate("cod_elec" = type_to_code_election(as.vector(type_elec)),
              .before = everything())
 
-    # Check if elections required are allowed
-    allowed_elections <-
-      dates_elections_spain |>
-      inner_join(asked_elections,
-                 by = c("cod_elec", "type_elec", "date"),
-                 suffix = c("", ".rm")) |>
-      select(-contains(".rm")) |>
-      distinct(cod_elec, type_elec, date, .keep_all = TRUE)
+    if (!is.null(year)) {
+
+      # Check if elections required are allowed
+      allowed_elections <-
+        dates_elections_spain |>
+        inner_join(asked_elections,
+                   by = c("cod_elec", "type_elec", "year"),
+                   suffix = c("", ".rm")) |>
+        select(-contains(".rm")) |>
+        distinct(cod_elec, type_elec, date, .keep_all = TRUE)
+
+    }
+
+    if (!is.null(date)) {
+
+      # Check if elections required are allowed
+      allowed_elections <-
+        dates_elections_spain |>
+        inner_join(asked_elections,
+                   by = c("cod_elec", "type_elec", "date"),
+                   suffix = c("", ".rm")) |>
+        select(-contains(".rm")) |>
+        distinct(cod_elec, type_elec, date, .keep_all = TRUE)
+
+    }
+
     if (allowed_elections |> nrow() == 0) {
 
       stop(red(glue("😵 No {type_elec} elections are available in {year}. Please, be sure that arguments are right")))
@@ -694,14 +711,32 @@ import_raw_candidacies_poll_file <-
       mutate("cod_elec" = type_to_code_election(as.vector(type_elec)),
              .before = everything())
 
-    # Check if elections required are allowed
-    allowed_elections <-
-      dates_elections_spain |>
-      inner_join(asked_elections,
-                 by = c("cod_elec", "type_elec", "date"),
-                 suffix = c("", ".rm")) |>
-      select(-contains(".rm")) |>
-      distinct(cod_elec, type_elec, date, .keep_all = TRUE)
+    if (!is.null(date)) {
+
+      # Check if elections required are allowed
+      allowed_elections <-
+        dates_elections_spain |>
+        inner_join(asked_elections,
+                   by = c("cod_elec", "type_elec", "date"),
+                   suffix = c("", ".rm")) |>
+        select(-contains(".rm")) |>
+        distinct(cod_elec, type_elec, date, .keep_all = TRUE)
+
+    }
+
+    if (!is.null(year)) {
+
+      # Check if elections required are allowed
+      allowed_elections <-
+        dates_elections_spain |>
+        inner_join(asked_elections,
+                   by = c("cod_elec", "type_elec", "year"),
+                   suffix = c("", ".rm")) |>
+        select(-contains(".rm")) |>
+        distinct(cod_elec, type_elec, date, .keep_all = TRUE)
+
+    }
+
     if (allowed_elections |> nrow() == 0) {
 
       stop(red(glue("😵 No {type_elec} elections are available in {year}. Please, be sure that arguments are right")))
