@@ -1,69 +1,600 @@
-# ----- packages -----
+
+# Libraries
 
 library(xml2)
 library(tidyverse)
 library(rvest)
 library(purrr)
+library(stringdist)
 library(httr)
+library(stringr)
+library(tibble)
+library(readr)
 library(lubridate)
 
-# ----- get a set of urls -----
+# Functions-------------------------------------------------
 
-# just to provide wiki url
-generate_url <- function(date) {
-
-  url <-
-    if_else(year(date) == 2019, if_else(month(date) == 11,
-                                        "https://en.wikipedia.org/wiki/Opinion_polling_for_the_November_2019_Spanish_general_election",
-                                        "https://en.wikipedia.org/wiki/Opinion_polling_for_the_April_2019_Spanish_general_election"),
-            paste0("https://en.wikipedia.org/wiki/Opinion_polling_for_the_", year(date), "_Spanish_general_election"))
-
-  return(url)
+generate_url <- function(years) {
+  if (years == 2019) {
+    c(
+      "https://en.wikipedia.org/wiki/Opinion_polling_for_the_November_2019_Spanish_general_election",
+      "https://en.wikipedia.org/wiki/Opinion_polling_for_the_April_2019_Spanish_general_election"
+    )
+  } else {
+    paste0("https://en.wikipedia.org/wiki/Opinion_polling_for_the_", years, "_Spanish_general_election")
+  }
 }
 
-# just for congress
-url_historical_surveys <-
-  dates_elections_spain |>
-  filter(cod_elec == "02") |>
-  select(-topic) |>
-  mutate("url_survey" = generate_url(date))
+get_tables_after_voting_estimates <- function(url) { # we need to find all tables after the h4 <h4 id="Voting_intention_estimates"> but before any other h4 or higher
 
-# ----- get a set of party names by date -----
+  siblings <- url %>%
+    read_html() %>%
+    xml_find_first(".//div[h4[@id='Voting_intention_estimates']]") %>% # starting node: has to be the parents => the div that contains <h4 id='Voting_intention_estimates'>
+    xml_find_all("following-sibling::*") # get all * following sibling tables after the one we just mentioned (div of h4) (https://www.roborabbit.com/blog/mastering-xpath-using-the-following-sibling-and-preceding-sibling-axes/)
 
-# conditional_extraction <- function(node) {
-#
-#   has_file_span <- xml_find_all(node, ".//span[contains(@typeof, 'mw:File')]")
-#
-#   # img
-#   if (length(has_file_span) > 0) {
-#
-#     node |>
-#       xml_find_first(".//a")  |>
-#       xml_attr("title")
-#
-#   } else { # text
-#
-#     node  |>
-#       xml_text()  |>
-#       str_trim()
-#
-#   }
-# }
-# extract_parties <- function(url) {
-#
-#   nodes <- url  |>
-#     read_html()  |>
-#     html_element("table")  |>
-#     xml_find_all(".//th[contains(@style, 'width:35px') or contains(@style, 'width:43px') or contains(@style, 'width:40px')]")
-#
-#   return(map_chr(nodes, conditional_extraction))
-#
-# }
-#
-# url_historical_surveys <-
-#   url_historical_surveys |>
-#   mutate("parties" = map(url_survey, extract_parties))
+  # manual trimming baby
+  boundary <- which(xml_name(siblings)
+                    == "div"
+                    & str_detect(xml_attr(siblings, "class"), "mw-heading[234]")
+  )
 
-usethis::use_data(url_historical_surveys, overwrite = TRUE,
-                  compress = "gzip")
-# write_csv(url_historical_surveys, "./data/url_historical_surveys.csv")
+  if (length(boundary) > 0) {
+    siblings <- siblings[1:(boundary[1] - 1)] # will go until the one before (-1!)
+  }
+
+
+  # GET THE YEARS FOR EACH TABLE OUT OF H5 id + THEIR CORRESPONDING TABLES
+  tables_with_years <- list()
+  last_h5_id <- NULL
+  current_year <- NULL
+
+  for (i in seq_along(siblings)) {
+    node <- siblings[[i]]
+
+    # checking if h5 header
+    if (xml_name(node) == "div" &&
+        str_detect(xml_attr(node, "class"), "mw-heading5")) {
+
+      # extract the year
+      h5_id <- node %>%
+        xml_find_first(".//h5") %>%
+        xml_attr("id")
+
+      last_h5_id <- h5_id  # store for later
+
+      current_year <- case_when(
+        str_detect(h5_id, "^\\d{4}$") ~ as.numeric(h5_id), # 4 digits
+        str_detect(h5_id, "^\\d{4}_") ~ as.numeric(str_extract(h5_id, "^\\d{4}")), # paranthesis
+        str_detect(h5_id, "^\\d{4}–\\d{4}$") ~ as.numeric(str_extract(h5_id, "^\\d{4}")), # year range
+        TRUE ~ as.numeric(str_extract(h5_id, "\\d{4}")) # anything else
+      )
+    }
+
+    # checking table => associate it with current year
+    if (xml_name(node) == "table") {
+
+      # if no h5 header was found => extract year from polling_firm
+      if (is.null(current_year) || is.na(current_year)) {
+        table_data <- tryCatch({
+          html_table(node)
+        }, error = function(e) NULL)
+
+        if (!is.null(table_data) && nrow(table_data) > 1 && ncol(table_data) > 0) {
+
+          # check first column (polling_firm) in all rows to find a year
+          for (row_i in 1:nrow(table_data)) {
+            polling_firm_year <- table_data[[row_i, 1]] |>
+              str_extract("[0-9]{4}") |>
+              as.numeric()
+
+            if (!is.na(polling_firm_year)) {
+              current_year <- polling_firm_year
+              cat(sprintf("No h5 header found, using year from polling_firm (row %d): %s\n", row_i, current_year))
+              break  # found a year, stop looking
+            }
+          }
+        }
+      }
+
+      # only add table if we have a valid year
+      if (!is.null(current_year) && !is.na(current_year)) {
+
+        tables_with_years[[length(tables_with_years) + 1]] <- list(
+          table = node,
+          year = current_year,
+          id = last_h5_id  # keep full h5 id as label
+        )
+
+        if (!is.null(last_h5_id)) {
+          cat(sprintf("Found h5 with ID: '%s' -> Year: %s\n", last_h5_id, current_year))
+          cat(sprintf("\t Found table under h5\n"))
+          last_h5_id <- NULL  # reset so we dont double print
+        }
+
+      }
+    }
+  }
+
+  # named by year
+  names(tables_with_years) <- map_chr(tables_with_years, ~ as.character(.x$year))
+
+  return(tables_with_years)
+}
+
+
+get_all_parties <- function(all_tables) {
+
+  # get party names from each set of table nodes
+  all_parties <- extract_party_names(all_tables)
+
+  # return with names as indices since each table gets its own party names
+  names(all_parties) <- seq_along(all_parties)
+
+  return(all_parties)
+
+}
+
+conditional_extraction <- function(node) {
+  has_file_span <- xml_find_all(node, ".//span[contains(@typeof, 'mw:File')]")
+
+  if (length(has_file_span) > 0) {
+    node %>%
+      xml_find_first(".//a") %>%
+      xml_attr("title")
+  } else {
+    node %>%
+      xml_text() %>%
+      str_trim()
+  }
+}
+
+
+extract_party_names <- function(tables) {
+  # iterate over each table
+  map(tables, function(x) {
+    table_node <- x$table
+
+    nodes <- table_node %>%
+      xml_find_all(".//th[
+                   contains(@style, 'width:35px') or
+                   contains(@style, 'width:43px') or
+                   contains(@style, 'width:40px')]")
+
+    map_chr(nodes, conditional_extraction)
+  })
+}
+
+# LINKS ----------------------------------------------------------
+# FUNCTION get all survey LINKS present in the wiki of one electoral year
+
+get_links_after_voting_estimates <- function(url) {
+
+  siblings <- url %>%
+    read_html() %>%
+    xml_find_first(".//div[h4[@id='Voting_intention_estimates']]") %>%
+    xml_find_all("following-sibling::*")
+
+  boundary <- which(xml_name(siblings) == "div" &
+                      str_detect(xml_attr(siblings, "class"), "mw-heading[234]"))
+
+  if (length(boundary) > 0) {
+    siblings <- siblings[1:(boundary[1] - 1)]
+  }
+
+  links_with_years <- list()
+  current_year <- NULL
+  last_h5_id <- NULL
+
+  for (i in seq_along(siblings)) {
+    node <- siblings[[i]]
+
+    # checking if h5 header
+    if (xml_name(node) == "div" &&
+        str_detect(xml_attr(node, "class"), "mw-heading5")) {
+
+      # extract the year
+      h5_id <- node %>%
+        xml_find_first(".//h5") %>%
+        xml_attr("id")
+
+      current_year <- case_when(
+        str_detect(h5_id, "^\\d{4}$") ~ as.numeric(h5_id), # 4 digits
+        str_detect(h5_id, "^\\d{4}_") ~ as.numeric(str_extract(h5_id, "^\\d{4}")), # parenthesis
+        str_detect(h5_id, "^\\d{4}–\\d{4}$") ~ as.numeric(str_extract(h5_id, "^\\d{4}")), # year range
+        TRUE ~ as.numeric(str_extract(h5_id, "\\d{4}")) # anything else
+      )
+
+      last_h5_id <- h5_id
+
+    }
+
+    # checking hatnote links after (!) heading
+    if (!is.null(current_year) && !is.na(current_year) &&
+        xml_name(node) == "div" &&
+        str_detect(xml_attr(node, "class"), "hatnote")) {
+
+      link_node <- node %>%
+        xml_find_first(".//a[@href]")
+
+      if (!is.na(link_node)) {
+        full_url <- paste0("https://en.wikipedia.org",
+                           xml_attr(link_node, "href"))
+
+        links_with_years[[length(links_with_years) + 1]] <- list(
+          url = full_url,
+          year = current_year,
+          id = last_h5_id
+        )
+
+      }
+    }
+  }
+
+  names(links_with_years) <- map_chr(links_with_years, function(x) {
+    if (!is.null(x$id)) x$id else as.character(x$year)
+  })
+
+  return(links_with_years)
+}
+
+
+# FUNCTION get tables from the LINKS found in the og urls
+
+get_tables_from_links <- function(url) {
+
+  sub_links <- get_links_after_voting_estimates(url)
+
+  if (length(sub_links) == 0) return(list())
+
+  all_tables_from_links <- list()
+
+  for (i in seq_along(sub_links)) {
+    link_info <- sub_links[[i]]
+    link_url <- link_info$url
+    link_year <- link_info$year
+
+    cat(sprintf("\n🔗🔗🔗 Processing link for subpage %s\n", link_year))
+
+    # get all siblings after the first h2 or just get all tables
+    tryCatch({
+      siblings <- link_url %>%
+        read_html() %>%
+        xml_find_all("//div[h3] | //table[contains(@class, 'wikitable')]")
+
+      last_h3_id <- NULL
+      current_year <- link_year  # fallback
+
+      for (j in seq_along(siblings)) {
+        node <- siblings[[j]]
+
+        # if we find an h3 header, update current year
+        if (xml_name(node) == "div" &&
+            str_detect(xml_attr(node, "class"), "mw-heading3")) {
+
+          h3_id <- node %>%
+            xml_find_first(".//h3") %>%
+            xml_attr("id")
+
+          # try to extract year from h3_id, fallback to link_year
+          extracted_year <- case_when(
+            str_detect(h3_id, "^\\d{4}$") ~ as.numeric(h3_id),
+            str_detect(h3_id, "^\\d{4}_") ~ as.numeric(str_extract(h3_id, "^\\d{4}")),
+            str_detect(h3_id, "^\\d{4}–\\d{4}$") ~ as.numeric(str_extract(h3_id, "^\\d{4}")),
+            TRUE ~ as.numeric(str_extract(h3_id, "\\d{4}"))
+          )
+
+          current_year <- if (!is.na(extracted_year)) extracted_year else link_year
+          last_h3_id <- h3_id
+
+        }
+
+        # if we find a wikitable
+        if (xml_name(node) == "table" &&
+            str_detect(xml_attr(node, "class"), "wikitable")) {
+
+          # test if table can be parsed
+          table_data <- tryCatch(html_table(node), error = function(e) NULL)
+
+          if (!is.null(table_data) && nrow(table_data) > 1 && !is.null(current_year)) {
+
+            all_tables_from_links[[length(all_tables_from_links) + 1]] <- list(
+              table = node,
+              year = current_year,
+              id = last_h3_id
+            )
+
+            if (!is.null(last_h3_id)) {
+              cat(sprintf("\t️Found h3 with ID: '%s' -> Year: %s\n", last_h3_id, current_year))
+            }
+
+            cat(sprintf("\tFound table in link with ID: '%s' -> Year: %s\n", h3_id, current_year))
+
+          }
+        }
+      }
+    })
+
+  }
+
+  # named by year
+  names(all_tables_from_links) <- map_chr(all_tables_from_links, ~ as.character(.x$year))
+
+  return(all_tables_from_links)
+}
+
+# FINAL FUNCTION -----------------------------------------------------------------------
+# FUNCTION extract polling data + add names
+
+extract_polling_data <- function(url, election_year, election_type = NULL) {
+
+  cat(sprintf("Starting extraction for %s (url: %s)\n\n", election_year, url))
+
+  # tables from original urls and from links inside urls
+  tables_main <- get_tables_after_voting_estimates(url)
+  tables_links <- get_tables_from_links(url)
+
+  all_tables_by_year <- c(tables_main, tables_links) %>% split(., names(.))
+  all_tables <- flatten(all_tables_by_year)
+  # str(all_tables)
+
+  cat(sprintf("\nFound %d tables total (%d from main page, %d from links)\n",
+              length(all_tables), length(tables_main), length(tables_links)))
+
+  # party names for each individual table (2019 case is automatically handled!)
+  all_parties <- get_all_parties(all_tables)
+
+  # convert xml tables to data frames
+  tables_list <- map(all_tables, function(x) html_table(x$table))
+  table_years <- map_dbl(all_tables, function(x) {as.numeric(x$year)})
+  table_ids <- map_chr(all_tables, ~ .x$id %||% NA_character_)
+
+  # clean each table individually
+  clean_data <- map2(tables_list, seq_along(tables_list), function(data, table_index) {
+
+    original_id <- table_ids[[table_index]]
+    year <- table_years[[table_index]]
+    cat(sprintf("\t Processing table %d: %s (year: %s)\n", table_index, original_id, year))
+
+    # party names for this specific table
+    raw_party_names <- all_parties[[table_index]]
+
+    party_names <- raw_party_names
+
+    colnames(data) <- c("polling_firm", "fieldwork_date", "sample_size", "turnout", party_names, "Lead")
+
+    return(data)
+  })
+
+  cat(sprintf("\nCompleted extraction for %s\n", url))
+
+  # to keep the ids as names! but #TODO: actually then you loose some names for some years, eg 2016: <unknown>
+  names(clean_data) <- table_ids
+
+  return(clean_data)
+
+}
+
+# CLEAN ROWS -----------------------------------------------------------------------
+# FUNCTION clean wiki pages
+
+clean_rows <- function(df, electoral_year = NULL) {
+
+  last_col <- ncol(df)
+
+  # election type patterns to filter out! => only found these in the wikis!
+  election_patterns <- c("general election", "local election", "EP election")
+
+  df <- df %>%
+    # empty rows
+    filter(!if_all(6:last_col, ~ is.na(.) | . == "")) %>%
+    # variables saved as first row
+    slice(-1) %>%
+    # rows that contain election type strings in the first column (polling firm!!)
+    filter(!str_detect(tolower(polling_firm), paste(election_patterns, collapse = "|"))) %>%
+
+    mutate(across(
+      everything(),
+      ~ case_when(
+        .x %in% c("–", "", "?", "—") ~ NA,
+        str_starts(.x, fixed("?")) ~ NA,
+        TRUE ~ .x
+      )
+    )) %>%
+
+    mutate(across(6:last_col, ~ str_extract(as.character(.x), "\\d+\\.\\d+|\\d+")))
+
+  df <- df |>
+    mutate(
+      polling_firm = str_remove_all(polling_firm, "\\[.*?\\]"),
+      polling_firm = str_trim(polling_firm),
+      media = str_extract(polling_firm, "(?<=/)\\s*[^/]+$"),
+      polling_firm = str_extract(polling_firm, "^[^/]+")
+    ) |>
+
+    relocate(media, .after = polling_firm)
+
+  df <- df |>
+    mutate(sample_size = str_replace_all(sample_size, ",", ""))
+
+
+  has_year <- any(str_detect(df$fieldwork_date, "[0-9]{4}"))
+
+  if (has_year) {
+    default_year <- str_extract(df$fieldwork_date, "[0-9]{4}") |> na.omit() |> as.numeric()
+
+    df <- df %>%
+      mutate(
+        start_day = str_extract(fieldwork_date, "^[0-9]{1,2}") |> as.numeric(),
+        end_str = str_extract(fieldwork_date, "(?<=–)[0-9]{1,2}\\s*[A-Za-z]{3}\\s*[0-9]{4}|(?<=–)[0-9]{1,2}\\s*[A-Za-z]{3}") |>
+          coalesce(str_extract(fieldwork_date, "[0-9]{1,2}\\s*[A-Za-z]{3}\\s*[0-9]{4}|[0-9]{1,2}\\s*[A-Za-z]{3}")),
+        end_day = str_extract(end_str, "^[0-9]{1,2}") |> as.numeric(),
+        end_day = if_else(is.na(end_day), start_day, end_day),
+        start_month = str_extract(fieldwork_date, "^[0-9]{1,2}\\s*([A-Za-z]{3})") %>% str_extract("[A-Za-z]{3}"),
+        end_month = str_extract(end_str, "[A-Za-z]{3}"),
+        start_month = if_else(is.na(start_month), end_month, start_month),
+        end_month = if_else(is.na(end_month), start_month, end_month),
+        year = str_extract(end_str, "[0-9]{4}") |> as.numeric(),
+        year = if_else(is.na(year), default_year, year),
+
+        # new vars
+        fieldwork_start = sprintf("%02d.%02d.%d", start_day, match(start_month, month.abb), year),
+        fieldwork_end = sprintf("%02d.%02d.%d", end_day, match(end_month, month.abb), year)
+      )  %>%
+      select(-c(turnout, fieldwork_date, start_day, end_str, end_day, start_month, end_month, year))
+  }
+  else {
+
+    # fallback: using the passed electoral_year parameter from h5 header!!
+    if (is.null(electoral_year) || is.na(electoral_year)) {
+
+      extracted_year <- df$polling_firm[1] |>
+        str_extract("[0-9]{4}") |>
+        as.numeric()
+
+      if (!is.na(extracted_year)) {
+        electoral_year <- extracted_year
+        cat(sprintf("Using year from polling_firm: %d\n", electoral_year))
+      } else {
+        stop("No electoral_year provided, no year found in dates, and no year found in polling_firm")
+      }
+
+    }
+
+    df <- df |>
+      mutate(
+
+        # full range two months, ex.: 29 Jun–17 Jul
+        full_str = str_extract(fieldwork_date, "([0-9]{1,2})\\s*([A-Za-z]{3})\\s*–\\s*([0-9]{1,2})\\s*([A-Za-z]{3})"),
+        # fallback one month two dates, ex.: for 29–31 Jul (no month on start)
+        end_str = coalesce(full_str, fieldwork_date), # str_to_lower  # stringr::str_squish
+
+        # extract start and end parts
+        start_day = as.numeric(str_extract(end_str, "^[0-9]{1,2}")),
+        # this does not work for start_month: str_extract(end_str, "[A-Za-z]{3}$"),
+        start_month = str_extract(end_str, "^[0-9]{1,2}\\s*([A-Za-z]{3})") %>% str_extract("[A-Za-z]{3}"),
+        # # TODO.3 scenarios. split in the middle. if no month at begging (detect), give the other start string the end month. if NA, double the first value.
+        # unispace? try out
+        end_day = as.numeric(str_extract(end_str, "(?<=–)\\s*[0-9]{1,2}") %>% str_trim()),
+        end_month = str_extract(end_str, "[A-Za-z]{3}$"),
+
+        # fallbacks
+        start_month = if_else(is.na(start_month), end_month, start_month),
+        end_day = if_else(is.na(end_day), start_day, end_day),
+        end_month = if_else(is.na(end_month), start_month, end_month),
+
+        # new vars
+        fieldwork_start = sprintf("%02d.%02d.%d", start_day, match(start_month, month.abb), electoral_year),
+        fieldwork_end = sprintf("%02d.%02d.%d", end_day, match(end_month, month.abb), electoral_year)
+
+      ) %>%
+      select(-c(turnout, fieldwork_date, full_str, end_str, start_day, end_day, start_month, end_month))
+
+
+  }
+
+  df <- df %>%
+    relocate(c(fieldwork_start, fieldwork_end), .after = media) |>
+
+    mutate(
+      fieldwork_start = as.Date(fieldwork_start, format = "%d.%m.%Y"),
+      fieldwork_end = as.Date(fieldwork_end, format = "%d.%m.%Y")
+    ) %>%
+    mutate(
+      # if fieldwork_start is after fieldwork_end =>  minus 1 year
+      fieldwork_start = if_else(
+        fieldwork_start > fieldwork_end,
+        fieldwork_start - years(1),
+        fieldwork_start
+      )
+    ) %>%
+
+    mutate(
+      n_field_days = as.integer(fieldwork_end - fieldwork_start + 1)
+    ) %>%
+    relocate(n_field_days, .after = fieldwork_end) %>%
+
+    mutate(across(
+      -c(id_elec, polling_firm, media, fieldwork_start, fieldwork_end),
+      ~ as.numeric(.)
+    ))
+
+  # trunkating one decimal after the point without rounding! logic: we make the number bigger than smaller again!
+  # not sample_size!
+
+  numeric_cols <- names(df)[sapply(df, is.numeric)]
+  cols_to_truncate <- setdiff(numeric_cols, "sample_size")
+
+  for (col in cols_to_truncate) {
+    df[[col]] <- trunc(df[[col]] * 10) / 10
+  }
+
+  return(df)
+
+}
+
+
+# Generationg the database----------------------------------
+
+years <- c(2023, 2019, 2016, 2015,
+           2011, 2008, 2004, 2000, 1996, 1993, 1989, 1986, 1982, 1979)
+
+urls <- unlist(map(years, generate_url))
+
+years <- c(2023, 2019, 2019, 2016, 2015,
+           2011, 2008, 2004, 2000, 1996, 1993, 1989, 1986, 1982, 1979)
+
+
+historical_surveys <- map2(urls, years, extract_polling_data)
+
+# Adding the id of each election
+
+id_elecs <- c(
+  "02-2023-07-23",
+  "02-2019-11-10",
+  "02-2019-04-28",
+  "02-2016-06-26",
+  "02-2015-12-20",
+  "02-2011-11-20",
+  "02-2008-03-09",
+  "02-2004-03-14",
+  "02-2000-03-12",
+  "02-1996-03-03",
+  "02-1993-06-06",
+  "02-1989-10-29",
+  "02-1986-06-22",
+  "02-1982-10-28",
+  "02-1979-03-01"
+)
+
+historical_surveys <- map2(
+  historical_surveys,
+  id_elecs,
+  \(sublist, codes) {
+    map(sublist, ~ mutate(.x, id_elec = codes, .before = everything()))
+  }
+)
+
+historical_surveys[[1]][[1]]
+
+# Adding the year of the surveys
+
+years2 <- c(2019, 2020, 2021, 2022, 2023, 2023, 2023, 2019, 2016,
+            2017, 2018, 2019, 2016, 2011, 2012, 2013, 2014, 2015,
+            2011, 2008, 2004, 2000, 1996, 1993, 1989, 1986, 1982,
+            1979)
+
+clean_historical_surveys <- map2(flatten(historical_surveys), years2, clean_rows)
+
+
+historical_surveys <- bind_rows(clean_historical_surveys)
+
+# ----- UTF-8 -----
+
+historical_surveys <-
+  historical_surveys |>
+  mutate(across(where(is.character), \(x) enc2utf8(x)))
+
+
+
+usethis::use_data(historical_surveys, overwrite = TRUE,
+                  compress = "xz")
