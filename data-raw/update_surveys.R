@@ -577,6 +577,11 @@ clean_new_polling_data <- map2(new_polling_data, years, clean_rows)
 
 new_polling_data <- bind_rows(clean_new_polling_data)
 
+# Adding id_elec
+
+new_polling_data <- new_polling_data |>
+  mutate(id_elec = "2027-NA-NA", .before = everything())
+
 # Pivot to long format and harmonise party names
 party_cols <- names(new_polling_data)[ (match("sample_size", names(new_polling_data)) + 1) : ncol(new_polling_data) ]
 

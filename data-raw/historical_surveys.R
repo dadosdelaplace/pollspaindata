@@ -568,14 +568,14 @@ mutate(across((match("turnout", names(df)) + 1):last_col, function(x) {str_extra
 # Pipeline to build the full historical data set
 
 years <- c(2023, 2019, 2016, 2015,
-           2011, 2008, 2004, 2000, 1996, 1993, 1989, 1986, 1982, 1979)
+           2011, 2008, 2004, 2000, 1996, 1993, 1989, 1986, 1982)
 
 urls <- unlist(map(years, generate_url))
 
 # 2019 appears twice in urls; create a matching vector of years (one per url)
 
 years <- c(2023, 2019, 2019, 2016, 2015,
-           2011, 2008, 2004, 2000, 1996, 1993, 1989, 1986, 1982, 1979)
+           2011, 2008, 2004, 2000, 1996, 1993, 1989, 1986, 1982)
 
 
 historical_surveys <- map2(urls, years, extract_polling_data)
@@ -587,8 +587,6 @@ id_elecs <- dates_elections_spain |>
   mutate(id_elec = paste(cod_elec, date, sep = "-")) |>
   pull(id_elec) |>
   rev()
-
-id_elecs <- c(id_elecs, "02-1979-03-01")
 
 
 historical_surveys <- map2(
@@ -603,8 +601,7 @@ historical_surveys <- map2(
 
 years2 <- c(2019, 2020, 2021, 2022, 2023, 2023, 2023, 2019, 2016,
             2017, 2018, 2019, 2016, 2011, 2012, 2013, 2014, 2015,
-            2011, 2008, 2004, 2000, 1996, 1993, 1989, 1986, 1982,
-            1979)
+            2011, 2008, 2004, 2000, 1996, 1993, 1989, 1986, 1982)
 
 clean_historical_surveys <- map2(flatten(historical_surveys), years2, clean_rows)
 
@@ -614,7 +611,7 @@ historical_surveys <- bind_rows(clean_historical_surveys)
 # Pivot to long format and harmonise party names
 
 historical_surveys <- historical_surveys |>
-  pivot_longer(cols = c(PSOE:TE, Junts:UN),            # all party columns
+  pivot_longer(cols = c(PSOE:TE, Junts:PAD),            # all party columns
                names_to = "abbrev_candidacies",
                values_to = "estimated_seats") |>
   drop_na(estimated_seats) |>
