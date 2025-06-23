@@ -51,8 +51,7 @@ get_tables_after_voting_estimates <- function(url) { # We need to find all table
     siblings <- siblings[1:(boundary[1] - 1)]
   }
 
-
-  # GET THE YEARS FOR EACH TABLE OUT OF H5 id + THEIR CORRESPONDING TABLES
+  # Get the years for each table out of h5 id + their corresponding tables
   tables_with_years <- list()
   last_h5_id <- NULL
   current_year <- NULL
@@ -437,7 +436,7 @@ clean_rows <- function(df, electoral_year = NULL) {
         TRUE ~ x
       )}
     )) |>
-mutate(across((match("turnout", names(df)) + 1):last_col, function(x) {str_extract(as.character(x), "\\d+\\.\\d+|\\d+")}))
+    mutate(across((match("turnout", names(df)) + 1):last_col, function(x) {str_extract(as.character(x), "\\d+\\.\\d+|\\d+")}))
 
   # Split “polling_firm / media” if both are in one cell
   df <- df |>
@@ -548,7 +547,7 @@ mutate(across((match("turnout", names(df)) + 1):last_col, function(x) {str_extra
     relocate(n_field_days, .after = fieldwork_end) |>
 
     mutate(across(
-      -c(id_elec, polling_firm, media, fieldwork_start, fieldwork_end),
+      -c(polling_firm, media, fieldwork_start, fieldwork_end),
       function(x){as.numeric(x)}
     ))
 
@@ -565,94 +564,74 @@ mutate(across((match("turnout", names(df)) + 1):last_col, function(x) {str_extra
 
 }
 
-# Pipeline to build the full historical data set
+# Generating the database----------------------------------
+url <- "https://en.wikipedia.org/wiki/Opinion_polling_for_the_next_Spanish_general_election"
 
-years <- c(2023, 2019, 2016, 2015,
-           2011, 2008, 2004, 2000, 1996, 1993, 1989, 1986, 1982, 1979)
+new_polling_data <- extract_polling_data(url, "Next elections")
 
-urls <- unlist(map(years, generate_url))
+# The list names are the table years (as strings) – convert to numeric
+years <- as.numeric(names(new_polling_data))
 
-# 2019 appears twice in urls; create a matching vector of years (one per url)
+# Clean each table using the heavy 'clean_rows()' routine
+clean_new_polling_data <- map2(new_polling_data, years, clean_rows)
 
-years <- c(2023, 2019, 2019, 2016, 2015,
-           2011, 2008, 2004, 2000, 1996, 1993, 1989, 1986, 1982, 1979)
-
-
-historical_surveys <- map2(urls, years, extract_polling_data)
-
-# Add election ids with the use of dates_elections_spain
-
-id_elecs <- dates_elections_spain |>
-  filter(cod_elec == "02") |>
-  mutate(id_elec = paste(cod_elec, date, sep = "-")) |>
-  pull(id_elec) |>
-  rev()
-
-id_elecs <- c(id_elecs, "02-1979-03-01")
-
-
-historical_surveys <- map2(
-  historical_surveys,
-  id_elecs,
-  \(sublist, codes) {
-    map(sublist, function(x) {mutate(x, id_elec = codes, .before = everything())})
-  }
-)
-
-# Adding the year of the surveys
-
-years2 <- c(2019, 2020, 2021, 2022, 2023, 2023, 2023, 2019, 2016,
-            2017, 2018, 2019, 2016, 2011, 2012, 2013, 2014, 2015,
-            2011, 2008, 2004, 2000, 1996, 1993, 1989, 1986, 1982,
-            1979)
-
-clean_historical_surveys <- map2(flatten(historical_surveys), years2, clean_rows)
-
-
-historical_surveys <- bind_rows(clean_historical_surveys)
+new_polling_data <- bind_rows(clean_new_polling_data)
 
 # Pivot to long format and harmonise party names
+party_cols <- names(new_polling_data)[ (match("sample_size", names(new_polling_data)) + 1) : ncol(new_polling_data) ]
 
-historical_surveys <- historical_surveys |>
-  pivot_longer(cols = c(PSOE:TE, Junts:UN),            # all party columns
-               names_to = "abbrev_candidacies",
-               values_to = "estimated_seats") |>
-  drop_na(estimated_seats) |>
-  mutate(
-    abbrev_candidacies = str_to_upper(abbrev_candidacies) |>
-      stri_trans_general("Latin-ASCII") |>
-      str_replace_all("['`´]", "") |>
-      stri_enc_toutf8()
-  ) |>
-  # Normalise variants
-    mutate(abbrev_candidacies = case_when(
-      grepl("UPN", abbrev_candidacies) & id_elec != "02-2023-07-24"        ~ "UPN-PP", # Unión del Pueblo Navarro
-      grepl("CCA|CC-NCA", abbrev_candidacies)          ~ "CC", # Coalición Canaria
-      grepl("PODEMOS", abbrev_candidacies)             ~ "PODEMOS", # Podemos
-      grepl("ERC", abbrev_candidacies)                 ~ "ERC", # Esquerra Republiana de Catalunya
-      grepl("MAS PAIS", abbrev_candidacies)            ~ "MP", # Más País
-      grepl("JXCAT|JUNTS", abbrev_candidacies)         ~ "JXCAT-JUNTS", # Junts
-      grepl("BILDU", abbrev_candidacies)               ~ "EH-BILDU", # Bildu
-      grepl("NA+", abbrev_candidacies)                 ~ "NA-SUMA", # Navarra Suma
-      grepl("PDECAT", abbrev_candidacies)              ~ "PDECAT-E-CIU", # Partido Demócratra Europeo Catalán
-      grepl("EV", abbrev_candidacies)                  ~ "BLOC-EV", # Bloc Nacionalista Valencia
-      grepl("^IU$|IU-", abbrev_candidacies)            ~ "IU", #Izquierda Unida
-      grepl("NI/IC", abbrev_candidacies)               ~ "ICV", #Iniciativa per Catalunya
-      grepl("^EA$|EE", abbrev_candidacies)             ~ "EA-EUE", # Eusko Alkartasuna - Euskal Ezquerra
-      grepl("^PA$", abbrev_candidacies)                ~ "PAR", # Partido Aragonés
-      grepl("^AP$", abbrev_candidacies)                ~ "AP-PDP-PL", # Alianza Popular
-      grepl("PAD", abbrev_candidacies)                 ~ "PS", # Partido de Acción Democrática? We do not have it in the dictionary
-      TRUE                                 ~ abbrev_candidacies
+party_cols <- setdiff(party_cols, "Lead")
+
+new_polling_data <- new_polling_data |>
+  pivot_longer(cols = all_of(party_cols), names_to = "abbrev_candidacies", values_to = "estimated_seats") |>
+  drop_na(estimated_seats)
+
+new_polling_data <- new_polling_data |>
+  mutate(abbrev_candidacies = abbrev_candidacies |>
+           str_to_upper() |>
+           stri_trans_general("Latin-ASCII") |>
+           str_replace_all("['`´]", "") |>
+           stri_enc_toutf8())
+
+new_polling_data <- new_polling_data |>
+  mutate(abbrev_candidacies = case_when(
+    grepl("CCA|CC-NCA", abbrev_candidacies)          ~ "CC", # Coalición Canaria
+    grepl("PODEMOS", abbrev_candidacies)             ~ "PODEMOS", # Podemos
+    grepl("ERC", abbrev_candidacies)                 ~ "ERC", # Esquerra Republiana de Catalunya
+    grepl("MAS PAIS", abbrev_candidacies)            ~ "MP", # Más País
+    grepl("JXCAT|JUNTS", abbrev_candidacies)         ~ "JXCAT-JUNTS", # Junts
+    grepl("BILDU", abbrev_candidacies)               ~ "EH-BILDU", # Bildu
+    grepl("NA+", abbrev_candidacies)                 ~ "NA-SUMA", # Navarra Suma
+    grepl("PDECAT", abbrev_candidacies)              ~ "PDECAT-E-CIU", # Partido Demócratra Europeo Catalán
+    grepl("EV", abbrev_candidacies)                  ~ "BLOC-EV", # Bloc Nacionalista Valencia
+    grepl("^IU$|IU-", abbrev_candidacies)            ~ "IU", #Izquierda Unida
+    grepl("NI/IC", abbrev_candidacies)               ~ "ICV", #Iniciativa per Catalunya
+    grepl("^EA$|EE", abbrev_candidacies)             ~ "EA-EUE", # Eusko Alkartasuna - Euskal Ezquerra
+    grepl("^PA$", abbrev_candidacies)                ~ "PAR", # Partido Aragonés
+    grepl("^AP$", abbrev_candidacies)                ~ "AP-PDP-PL", # Alianza Popular
+    grepl("PAD", abbrev_candidacies)                 ~ "PS", # Partido de Acción Democrática? We do not have it in the dictionary
+    TRUE                                 ~ abbrev_candidacies
   ))
-
-# We have to also check the ones that appear as CDC, UN and PSP
 
 # ----- UTF-8 -----
 
-historical_surveys <-
-  historical_surveys |>
+new_polling_data <-
+  new_polling_data |>
   mutate(across(where(is.character), \(x) enc2utf8(x)))
 
+if (!file.exists("data/next_election_polling_data.rda")){
 
-usethis::use_data(historical_surveys, overwrite = TRUE,
-                  compress = "xz")
+  next_election_polling_data <- new_polling_data
+
+  usethis::use_data(next_election_polling_data, overwrite = TRUE,
+                    compress = "xz")
+
+} else if (nrow(new_polling_data) > nrow(next_election_polling_data)) {
+
+  next_election_polling_data <- new_polling_data
+
+
+  usethis::use_data(next_election_polling_data, overwrite = TRUE,
+                    compress = "xz")
+
+}

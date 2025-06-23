@@ -152,7 +152,7 @@
 #' @description A dataset containing surveys about all the  congress elections
 #' held in Spain.
 #'
-#' @format A data frame with 3475 rows and 72 variables:
+#' @format A data frame with 31195 rows and 9 variables:
 #' \itemize{
 #'   \item \code{id_elec}: election's id constructed from the election code
 #'    and date
@@ -161,15 +161,13 @@
 #'   \item \code{fieldwork_start}, \code{fieldwork_end},
 #'         \code{n_field_days}: fieldwork period and its length (days)
 #'   \item \code{sample_size}: sample size of the survey
-#'   \item \code{Lead}: seat difference between the top two parties
-#'   \item Party columns
-#'         \code{PSOE}, \code{PP}, \code{Sumar}, …, \code{UPyD} (60 in total):
-#'         estimated number of seats for each party.
+#'   \item \code{abbrev_candidacies}: short label of the electoral candidacy
+#'   \item \code{estimated seats}: estimated number of seats for each party
 #' }
 #'
 #' @author Javier Álvarez-Liébana and David Pereiro-Pol.
 #'
-#' @source pending...
+#' @source Data extracted from multiple Wikipedia pages
 #' @docType data
 #' @keywords datasets
 #' @name historical_surveys
@@ -179,3 +177,32 @@
 #' # Load data
 #' data(historical_surveys)
 "historical_surveys"
+
+#' @title Surveys data for congress elections
+#'
+#' @description A dataset containing surveys about the forthcoming congress elections
+#' in Spain.
+#'
+#' @format A data frame with 3576 rows and 8 variables:
+#' \itemize{
+#'   \item \code{polling_firm}: organisation conducting the poll
+#'   \item \code{media}: commissioning organisation / media outlet
+#'   \item \code{fieldwork_start}, \code{fieldwork_end},
+#'         \code{n_field_days}: fieldwork period and its length (days)
+#'   \item \code{sample_size}: sample size of the survey
+#'   \item \code{abbrev_candidacies}: short label of the electoral candidacy
+#'   \item \code{estimated seats}: estimated number of seats for each party
+#' }
+#'
+#' @author Javier Álvarez-Liébana and David Pereiro-Pol.
+#'
+#' @source Data extracted from multiple Wikipedia pages
+#' @docType data
+#' @keywords datasets
+#' @name next_election_polling_data
+#' @usage data(next_election_polling_data)
+#'
+#' @examples
+#' # Load data
+#' data(next_election_polling_data)
+"next_election_polling_data"
