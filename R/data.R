@@ -146,8 +146,6 @@
 #' # Load data
 #' data(cod_INE_mun)
 "cod_INE_mun"
-<<<<<<< Updated upstream
-=======
 
 #' @title Dictionary for parties and candidacies
 #'
@@ -214,4 +212,36 @@
 #' # Load data
 #' data(historical_surveys)
 "historical_surveys"
->>>>>>> Stashed changes
+
+#' @title Surveys data for congress elections
+#'
+#' @description A dataset containing surveys about all the  congress elections
+#' held in Spain.
+#'
+#' @format A data frame with 3475 rows and 72 variables:
+#' \itemize{
+#'   \item \code{id_elec}: election's id constructed from the election code
+#'    and date
+#'   \item \code{polling_firm}: organisation conducting the poll
+#'   \item \code{media}: commissioning organisation / media outlet
+#'   \item \code{fieldwork_start}, \code{fieldwork_end},
+#'         \code{n_field_days}: fieldwork period and its length (days)
+#'   \item \code{sample_size}: sample size of the survey
+#'   \item \code{Lead}: seat difference between the top two parties
+#'   \item Party columns
+#'         \code{PSOE}, \code{PP}, \code{Sumar}, …, \code{UPyD} (60 in total):
+#'         estimated number of seats for each party.
+#' }
+#'
+#' @author Javier Álvarez-Liébana and David Pereiro-Pol.
+#'
+#' @source pending...
+#' @docType data
+#' @keywords datasets
+#' @name historical_surveys_wide
+#' @usage data(historical_surveys_wide)
+#'
+#' @examples
+#' # Load data
+#' data(historical_surveys_wide)
+"historical_surveys_wide"
