@@ -73,6 +73,13 @@ dates_elections_spain <-
   mutate(year = year(date), month = month(date), day = day(date)) %>%
   relocate(topic, .after = everything())
 
+# ----- UTF-8 -----
+
+dates_elections_spain <-
+  dates_elections_spain |>
+  mutate(across(where(is.character), \(x) enc2utf8(x)))
+
+
 # ----- use data -----
 usethis::use_data(dates_elections_spain, overwrite = TRUE,
                   compress = "gzip")

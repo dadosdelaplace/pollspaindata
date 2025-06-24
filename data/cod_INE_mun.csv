@@ -4616,278 +4616,278 @@ id_INE_mun,id_MIR_mun,cod_INE_ccaa,cod_MIR_ccaa,cod_INE_prov,cod_INE_mun,cd_INE_
 14-30-041,15-30-041,14,15,30,041,3,"Unión, La (Murcia)",Región de Murcia,Murcia
 14-30-042,15-30-042,14,15,30,042,8,Villanueva del Río Segura (Murcia),Región de Murcia,Murcia
 14-30-043,15-30-043,14,15,30,043,4,Yecla (Murcia),Región de Murcia,Murcia
-15-31-001,13-31-001,15,13,31,001,8,Abáigar (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-002,13-31-002,15,13,31,002,3,Abárzuza/Abartzuza (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-003,13-31-003,15,13,31,003,9,Abaurregaina/Abaurrea Alta (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-004,13-31-004,15,13,31,004,4,Abaurrepea/Abaurrea Baja (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-005,13-31-005,15,13,31,005,7,Aberin (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-006,13-31-006,15,13,31,006,0,Ablitas (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-007,13-31-007,15,13,31,007,6,Adiós (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-008,13-31-008,15,13,31,008,2,Aguilar de Codés (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-009,13-31-009,15,13,31,009,5,Aibar/Oibar (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-011,13-31-011,15,13,31,011,6,Allín/Allin (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-012,13-31-012,15,13,31,012,1,Allo (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-010,13-31-010,15,13,31,010,9,Altsasu/Alsasua (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-013,13-31-013,15,13,31,013,7,Améscoa Baja (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-014,13-31-014,15,13,31,014,2,Ancín/Antzin (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-015,13-31-015,15,13,31,015,5,Andosilla (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-016,13-31-016,15,13,31,016,8,Ansoáin/Antsoain (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-017,13-31-017,15,13,31,017,4,Anue (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-018,13-31-018,15,13,31,018,0,Añorbe (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-019,13-31-019,15,13,31,019,3,Aoiz/Agoitz (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-020,13-31-020,15,13,31,020,7,Araitz (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-025,13-31-025,15,13,31,025,3,Arakil (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-021,13-31-021,15,13,31,021,4,Aranarache/Aranaratxe (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-023,13-31-023,15,13,31,023,5,Aranguren (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-024,13-31-024,15,13,31,024,0,Arano (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-022,13-31-022,15,13,31,022,9,Arantza (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-026,13-31-026,15,13,31,026,6,Aras (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-027,13-31-027,15,13,31,027,2,Arbizu (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-028,13-31-028,15,13,31,028,8,Arce/Artzi (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-029,13-31-029,15,13,31,029,1,"Arcos, Los (Navarra/Nafarroa)",Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-030,13-31-030,15,13,31,030,5,Arellano (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-031,13-31-031,15,13,31,031,2,Areso (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-032,13-31-032,15,13,31,032,7,Arguedas (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-033,13-31-033,15,13,31,033,3,Aria (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-034,13-31-034,15,13,31,034,8,Aribe (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-035,13-31-035,15,13,31,035,1,Armañanzas (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-036,13-31-036,15,13,31,036,4,Arróniz (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-037,13-31-037,15,13,31,037,0,Arruazu (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-038,13-31-038,15,13,31,038,6,Artajona (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-039,13-31-039,15,13,31,039,9,Artazu (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-040,13-31-040,15,13,31,040,3,Atez/Atetz (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-058,13-31-058,15,13,31,058,1,Auritz/Burguete (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-041,13-31-041,15,13,31,041,0,Ayegui/Aiegi (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-042,13-31-042,15,13,31,042,5,Azagra (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-043,13-31-043,15,13,31,043,1,Azuelo (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-044,13-31-044,15,13,31,044,6,Bakaiku (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-901,13-31-901,15,13,31,901,9,Barañáin/Barañain (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-045,13-31-045,15,13,31,045,9,Barásoain (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-046,13-31-046,15,13,31,046,2,Barbarin (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-047,13-31-047,15,13,31,047,8,Bargota (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-048,13-31-048,15,13,31,048,4,Barillas (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-049,13-31-049,15,13,31,049,7,Basaburua (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-050,13-31-050,15,13,31,050,0,Baztan (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-137,13-31-137,15,13,31,137,9,Beintza-Labaien (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-051,13-31-051,15,13,31,051,7,Beire (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-052,13-31-052,15,13,31,052,2,Belascoáin (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-250,13-31-250,15,13,31,250,8,Bera (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-053,13-31-053,15,13,31,053,8,Berbinzana (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-905,13-31-905,15,13,31,905,8,Beriáin (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-902,13-31-902,15,13,31,902,4,Berrioplano/Berriobeiti (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-903,13-31-903,15,13,31,903,0,Berriozar (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-054,13-31-054,15,13,31,054,3,Bertizarana (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-055,13-31-055,15,13,31,055,6,Betelu (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-253,13-31-253,15,13,31,253,6,Bidaurreta (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-056,13-31-056,15,13,31,056,9,Biurrun-Olcoz (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-057,13-31-057,15,13,31,057,5,Buñuel (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-059,13-31-059,15,13,31,059,4,Burgui/Burgi (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-060,13-31-060,15,13,31,060,8,Burlada/Burlata (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-061,13-31-061,15,13,31,061,5,"Busto, El (Navarra/Nafarroa)",Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-062,13-31-062,15,13,31,062,0,Cabanillas (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-063,13-31-063,15,13,31,063,6,Cabredo (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-064,13-31-064,15,13,31,064,1,Cadreita (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-065,13-31-065,15,13,31,065,4,Caparroso (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-066,13-31-066,15,13,31,066,7,Cárcar (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-067,13-31-067,15,13,31,067,3,Carcastillo (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-068,13-31-068,15,13,31,068,9,Cascante (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-069,13-31-069,15,13,31,069,2,Cáseda (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-070,13-31-070,15,13,31,070,6,Castejón (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-071,13-31-071,15,13,31,071,3,Castillonuevo (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-193,13-31-193,15,13,31,193,9,Cendea de Olza/Oltza Zendea (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-072,13-31-072,15,13,31,072,8,Cintruénigo (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-074,13-31-074,15,13,31,074,9,Cirauqui/Zirauki (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-075,13-31-075,15,13,31,075,2,Ciriza/Ziritza (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-076,13-31-076,15,13,31,076,5,Cizur (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-077,13-31-077,15,13,31,077,1,Corella (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-078,13-31-078,15,13,31,078,7,Cortes (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-079,13-31-079,15,13,31,079,0,Desojo (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-080,13-31-080,15,13,31,080,4,Dicastillo (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-081,13-31-081,15,13,31,081,1,Donamaria (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-221,13-31-221,15,13,31,221,2,Doneztebe/Santesteban (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-083,13-31-083,15,13,31,083,2,Echarri/Etxarri (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-087,13-31-087,15,13,31,087,9,Elgorriaga (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-089,13-31-089,15,13,31,089,8,Enériz/Eneritz (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-090,13-31-090,15,13,31,090,2,Eratsun (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-091,13-31-091,15,13,31,091,9,Ergoiena (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-092,13-31-092,15,13,31,092,4,Erro (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-094,13-31-094,15,13,31,094,5,Eslava (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-095,13-31-095,15,13,31,095,8,Esparza de Salazar/Espartza Zaraitzu (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-096,13-31-096,15,13,31,096,1,Espronceda (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-097,13-31-097,15,13,31,097,7,Estella-Lizarra (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-098,13-31-098,15,13,31,098,3,Esteribar (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-099,13-31-099,15,13,31,099,6,Etayo (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-082,13-31-082,15,13,31,082,6,Etxalar (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-084,13-31-084,15,13,31,084,7,Etxarri Aranatz (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-085,13-31-085,15,13,31,085,0,Etxauri (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-100,13-31-100,15,13,31,100,0,Eulate (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-101,13-31-101,15,13,31,101,7,Ezcabarte (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-093,13-31-093,15,13,31,093,0,Ezcároz/Ezkaroze (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-102,13-31-102,15,13,31,102,2,Ezkurra (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-103,13-31-103,15,13,31,103,8,Ezprogui (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-104,13-31-104,15,13,31,104,3,Falces (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-105,13-31-105,15,13,31,105,6,Fitero (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-106,13-31-106,15,13,31,106,9,Fontellas (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-107,13-31-107,15,13,31,107,5,Funes (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-108,13-31-108,15,13,31,108,1,Fustiñana (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-109,13-31-109,15,13,31,109,4,Galar (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-110,13-31-110,15,13,31,110,8,Gallipienzo/Galipentzu (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-111,13-31-111,15,13,31,111,5,Gallués/Galoze (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-112,13-31-112,15,13,31,112,0,Garaioa (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-113,13-31-113,15,13,31,113,6,Garde (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-114,13-31-114,15,13,31,114,1,Garínoain (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-115,13-31-115,15,13,31,115,4,Garralda (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-116,13-31-116,15,13,31,116,7,Genevilla (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-117,13-31-117,15,13,31,117,3,Goizueta (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-118,13-31-118,15,13,31,118,9,Goñi (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-119,13-31-119,15,13,31,119,2,Güesa/Gorza (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-120,13-31-120,15,13,31,120,6,Guesálaz/Gesalatz (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-121,13-31-121,15,13,31,121,3,Guirguillano (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-256,13-31-256,15,13,31,256,7,Hiriberri/Villanueva de Aezkoa (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-122,13-31-122,15,13,31,122,8,Huarte/Uharte (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-124,13-31-124,15,13,31,124,9,Ibargoiti (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-259,13-31-259,15,13,31,259,2,Igantzi (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-125,13-31-125,15,13,31,125,2,Igúzquiza (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-126,13-31-126,15,13,31,126,5,Imotz (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-127,13-31-127,15,13,31,127,1,Irañeta (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-904,13-31-904,15,13,31,904,5,Irurtzun (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-128,13-31-128,15,13,31,128,7,Isaba/Izaba (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-129,13-31-129,15,13,31,129,0,Ituren (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-130,13-31-130,15,13,31,130,4,Iturmendi (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-131,13-31-131,15,13,31,131,1,Iza/Itza (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-132,13-31-132,15,13,31,132,6,Izagaondoa (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-133,13-31-133,15,13,31,133,2,Izalzu/Itzaltzu (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-134,13-31-134,15,13,31,134,7,Jaurrieta (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-135,13-31-135,15,13,31,135,0,Javier (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-136,13-31-136,15,13,31,136,3,Juslapeña (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-138,13-31-138,15,13,31,138,5,Lakuntza (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-139,13-31-139,15,13,31,139,8,Lana (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-140,13-31-140,15,13,31,140,2,Lantz (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-141,13-31-141,15,13,31,141,9,Lapoblación (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-142,13-31-142,15,13,31,142,4,Larraga (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-143,13-31-143,15,13,31,143,0,Larraona (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-144,13-31-144,15,13,31,144,5,Larraun (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-145,13-31-145,15,13,31,145,8,Lazagurría (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-146,13-31-146,15,13,31,146,1,Leache/Leatxe (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-147,13-31-147,15,13,31,147,7,Legarda (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-148,13-31-148,15,13,31,148,3,Legaria (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-149,13-31-149,15,13,31,149,6,Leitza (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-908,13-31-908,15,13,31,908,3,Lekunberri (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-150,13-31-150,15,13,31,150,9,Leoz/Leotz (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-151,13-31-151,15,13,31,151,6,Lerga (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-152,13-31-152,15,13,31,152,1,Lerín (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-153,13-31-153,15,13,31,153,7,Lesaka (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-154,13-31-154,15,13,31,154,2,Lezaun (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-155,13-31-155,15,13,31,155,5,Liédena (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-156,13-31-156,15,13,31,156,8,Lizoáin-Arriasgoiti (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-157,13-31-157,15,13,31,157,4,Lodosa (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-158,13-31-158,15,13,31,158,0,Lónguida/Longida (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-159,13-31-159,15,13,31,159,3,Lumbier (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-160,13-31-160,15,13,31,160,7,Luquin (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-248,13-31-248,15,13,31,248,2,Luzaide/Valcarlos (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-161,13-31-161,15,13,31,161,4,Mañeru (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-162,13-31-162,15,13,31,162,9,Marañón (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-163,13-31-163,15,13,31,163,5,Marcilla (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-164,13-31-164,15,13,31,164,0,Mélida (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-165,13-31-165,15,13,31,165,3,Mendavia (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-166,13-31-166,15,13,31,166,6,Mendaza (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-167,13-31-167,15,13,31,167,2,Mendigorria (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-168,13-31-168,15,13,31,168,8,Metauten (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-169,13-31-169,15,13,31,169,1,Milagro (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-170,13-31-170,15,13,31,170,5,Mirafuentes (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-171,13-31-171,15,13,31,171,2,Miranda de Arga (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-172,13-31-172,15,13,31,172,7,Monreal/Elo (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-173,13-31-173,15,13,31,173,3,Monteagudo (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-174,13-31-174,15,13,31,174,8,Morentin (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-175,13-31-175,15,13,31,175,1,Mues (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-176,13-31-176,15,13,31,176,4,Murchante (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-177,13-31-177,15,13,31,177,0,Murieta (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-178,13-31-178,15,13,31,178,6,Murillo el Cuende (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-179,13-31-179,15,13,31,179,9,Murillo el Fruto (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-180,13-31-180,15,13,31,180,3,Muruzábal (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-181,13-31-181,15,13,31,181,0,Navascués/Nabaskoze (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-182,13-31-182,15,13,31,182,5,Nazar (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-088,13-31-088,15,13,31,088,5,Noáin (Valle de Elorz)/Noain (Elortzibar) (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-183,13-31-183,15,13,31,183,1,Obanos (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-185,13-31-185,15,13,31,185,9,Ochagavía/Otsagabia (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-184,13-31-184,15,13,31,184,6,Oco (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-186,13-31-186,15,13,31,186,2,Odieta (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-187,13-31-187,15,13,31,187,8,Oiz (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-188,13-31-188,15,13,31,188,4,Olaibar (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-189,13-31-189,15,13,31,189,7,Olazti/Olazagutía (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-190,13-31-190,15,13,31,190,1,Olejua (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-191,13-31-191,15,13,31,191,8,Olite/Erriberri (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-192,13-31-192,15,13,31,192,3,Olóriz/Oloritz (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-195,13-31-195,15,13,31,195,7,Orbaizeta (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-196,13-31-196,15,13,31,196,0,Orbara (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-197,13-31-197,15,13,31,197,6,Orísoain (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-906,13-31-906,15,13,31,906,1,Orkoien (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-198,13-31-198,15,13,31,198,2,Oronz/Orontze (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-199,13-31-199,15,13,31,199,5,Oroz-Betelu/Orotz-Betelu (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-211,13-31-211,15,13,31,211,4,Orreaga/Roncesvalles (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-200,13-31-200,15,13,31,200,9,Oteiza (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-201,13-31-201,15,13,31,201,6,Pamplona/Iruña (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-202,13-31-202,15,13,31,202,1,Peralta/Azkoien (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-203,13-31-203,15,13,31,203,7,Petilla de Aragón (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-204,13-31-204,15,13,31,204,2,Piedramillera (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-205,13-31-205,15,13,31,205,5,Pitillas (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-206,13-31-206,15,13,31,206,8,Puente la Reina/Gares (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-207,13-31-207,15,13,31,207,4,Pueyo (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-208,13-31-208,15,13,31,208,0,Ribaforada (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-209,13-31-209,15,13,31,209,3,Romanzado (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-210,13-31-210,15,13,31,210,7,Roncal/Erronkari (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-212,13-31-212,15,13,31,212,9,Sada (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-213,13-31-213,15,13,31,213,5,Saldías (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-214,13-31-214,15,13,31,214,0,Salinas de Oro/Jaitz (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-215,13-31-215,15,13,31,215,3,San Adrián (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-217,13-31-217,15,13,31,217,2,San Martín de Unx (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-216,13-31-216,15,13,31,216,6,Sangüesa/Zangoza (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-219,13-31-219,15,13,31,219,1,Sansol (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-220,13-31-220,15,13,31,220,5,Santacara (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-222,13-31-222,15,13,31,222,7,Sarriés/Sartze (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-223,13-31-223,15,13,31,223,3,Sartaguda (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-224,13-31-224,15,13,31,224,8,Sesma (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-225,13-31-225,15,13,31,225,1,Sorlada (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-226,13-31-226,15,13,31,226,4,Sunbilla (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-227,13-31-227,15,13,31,227,0,Tafalla (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-228,13-31-228,15,13,31,228,6,Tiebas-Muruarte de Reta (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-229,13-31-229,15,13,31,229,9,Tirapu (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-230,13-31-230,15,13,31,230,3,Torralba del Río (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-231,13-31-231,15,13,31,231,0,Torres del Río (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-232,13-31-232,15,13,31,232,5,Tudela (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-233,13-31-233,15,13,31,233,1,Tulebras (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-234,13-31-234,15,13,31,234,6,Ucar (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-123,13-31-123,15,13,31,123,4,Uharte Arakil (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-235,13-31-235,15,13,31,235,9,Ujué/Uxue (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-236,13-31-236,15,13,31,236,2,Ultzama (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-237,13-31-237,15,13,31,237,8,Unciti (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-238,13-31-238,15,13,31,238,4,Unzué/Untzue (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-239,13-31-239,15,13,31,239,7,Urdazubi/Urdax (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-240,13-31-240,15,13,31,240,1,Urdiain (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-241,13-31-241,15,13,31,241,8,Urraul Alto (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-242,13-31-242,15,13,31,242,3,Urraul Bajo (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-244,13-31-244,15,13,31,244,4,Urroz (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-243,13-31-243,15,13,31,243,9,Urroz-Villa (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-245,13-31-245,15,13,31,245,7,Urzainqui/Urzainki (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-246,13-31-246,15,13,31,246,0,Uterga (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-247,13-31-247,15,13,31,247,6,Uztárroz/Uztarroze (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-086,13-31-086,15,13,31,086,3,Valle de Egüés/Eguesibar (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-194,13-31-194,15,13,31,194,4,Valle de Ollo/Ollaran (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-260,13-31-260,15,13,31,260,6,Valle de Yerri/Deierri (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-249,13-31-249,15,13,31,249,5,Valtierra (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-251,13-31-251,15,13,31,251,5,Viana (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-252,13-31-252,15,13,31,252,0,Vidángoz/Bidankoze (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-254,13-31-254,15,13,31,254,1,Villafranca (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-255,13-31-255,15,13,31,255,4,Villamayor de Monjardín (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-257,13-31-257,15,13,31,257,3,Villatuerta (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-258,13-31-258,15,13,31,258,9,Villava/Atarrabia (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-261,13-31-261,15,13,31,261,3,Yesa (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-262,13-31-262,15,13,31,262,8,Zabalza/Zabaltza (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-073,13-31-073,15,13,31,073,4,Ziordia (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-907,13-31-907,15,13,31,907,7,Zizur Mayor/Zizur Nagusia (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-263,13-31-263,15,13,31,263,4,Zubieta (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-264,13-31-264,15,13,31,264,9,Zugarramurdi (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
-15-31-265,13-31-265,15,13,31,265,2,Zúñiga (Navarra/Nafarroa),Comunidad Foral de Navarra ,Navarra/Nafarroa
+15-31-001,13-31-001,15,13,31,001,8,Abáigar (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-002,13-31-002,15,13,31,002,3,Abárzuza/Abartzuza (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-003,13-31-003,15,13,31,003,9,Abaurregaina/Abaurrea Alta (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-004,13-31-004,15,13,31,004,4,Abaurrepea/Abaurrea Baja (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-005,13-31-005,15,13,31,005,7,Aberin (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-006,13-31-006,15,13,31,006,0,Ablitas (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-007,13-31-007,15,13,31,007,6,Adiós (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-008,13-31-008,15,13,31,008,2,Aguilar de Codés (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-009,13-31-009,15,13,31,009,5,Aibar/Oibar (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-011,13-31-011,15,13,31,011,6,Allín/Allin (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-012,13-31-012,15,13,31,012,1,Allo (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-010,13-31-010,15,13,31,010,9,Altsasu/Alsasua (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-013,13-31-013,15,13,31,013,7,Améscoa Baja (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-014,13-31-014,15,13,31,014,2,Ancín/Antzin (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-015,13-31-015,15,13,31,015,5,Andosilla (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-016,13-31-016,15,13,31,016,8,Ansoáin/Antsoain (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-017,13-31-017,15,13,31,017,4,Anue (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-018,13-31-018,15,13,31,018,0,Añorbe (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-019,13-31-019,15,13,31,019,3,Aoiz/Agoitz (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-020,13-31-020,15,13,31,020,7,Araitz (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-025,13-31-025,15,13,31,025,3,Arakil (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-021,13-31-021,15,13,31,021,4,Aranarache/Aranaratxe (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-023,13-31-023,15,13,31,023,5,Aranguren (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-024,13-31-024,15,13,31,024,0,Arano (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-022,13-31-022,15,13,31,022,9,Arantza (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-026,13-31-026,15,13,31,026,6,Aras (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-027,13-31-027,15,13,31,027,2,Arbizu (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-028,13-31-028,15,13,31,028,8,Arce/Artzi (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-029,13-31-029,15,13,31,029,1,"Arcos, Los (Navarra/Nafarroa)",Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-030,13-31-030,15,13,31,030,5,Arellano (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-031,13-31-031,15,13,31,031,2,Areso (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-032,13-31-032,15,13,31,032,7,Arguedas (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-033,13-31-033,15,13,31,033,3,Aria (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-034,13-31-034,15,13,31,034,8,Aribe (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-035,13-31-035,15,13,31,035,1,Armañanzas (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-036,13-31-036,15,13,31,036,4,Arróniz (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-037,13-31-037,15,13,31,037,0,Arruazu (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-038,13-31-038,15,13,31,038,6,Artajona (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-039,13-31-039,15,13,31,039,9,Artazu (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-040,13-31-040,15,13,31,040,3,Atez/Atetz (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-058,13-31-058,15,13,31,058,1,Auritz/Burguete (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-041,13-31-041,15,13,31,041,0,Ayegui/Aiegi (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-042,13-31-042,15,13,31,042,5,Azagra (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-043,13-31-043,15,13,31,043,1,Azuelo (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-044,13-31-044,15,13,31,044,6,Bakaiku (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-901,13-31-901,15,13,31,901,9,Barañáin/Barañain (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-045,13-31-045,15,13,31,045,9,Barásoain (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-046,13-31-046,15,13,31,046,2,Barbarin (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-047,13-31-047,15,13,31,047,8,Bargota (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-048,13-31-048,15,13,31,048,4,Barillas (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-049,13-31-049,15,13,31,049,7,Basaburua (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-050,13-31-050,15,13,31,050,0,Baztan (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-137,13-31-137,15,13,31,137,9,Beintza-Labaien (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-051,13-31-051,15,13,31,051,7,Beire (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-052,13-31-052,15,13,31,052,2,Belascoáin (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-250,13-31-250,15,13,31,250,8,Bera (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-053,13-31-053,15,13,31,053,8,Berbinzana (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-905,13-31-905,15,13,31,905,8,Beriáin (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-902,13-31-902,15,13,31,902,4,Berrioplano/Berriobeiti (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-903,13-31-903,15,13,31,903,0,Berriozar (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-054,13-31-054,15,13,31,054,3,Bertizarana (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-055,13-31-055,15,13,31,055,6,Betelu (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-253,13-31-253,15,13,31,253,6,Bidaurreta (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-056,13-31-056,15,13,31,056,9,Biurrun-Olcoz (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-057,13-31-057,15,13,31,057,5,Buñuel (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-059,13-31-059,15,13,31,059,4,Burgui/Burgi (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-060,13-31-060,15,13,31,060,8,Burlada/Burlata (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-061,13-31-061,15,13,31,061,5,"Busto, El (Navarra/Nafarroa)",Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-062,13-31-062,15,13,31,062,0,Cabanillas (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-063,13-31-063,15,13,31,063,6,Cabredo (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-064,13-31-064,15,13,31,064,1,Cadreita (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-065,13-31-065,15,13,31,065,4,Caparroso (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-066,13-31-066,15,13,31,066,7,Cárcar (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-067,13-31-067,15,13,31,067,3,Carcastillo (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-068,13-31-068,15,13,31,068,9,Cascante (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-069,13-31-069,15,13,31,069,2,Cáseda (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-070,13-31-070,15,13,31,070,6,Castejón (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-071,13-31-071,15,13,31,071,3,Castillonuevo (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-193,13-31-193,15,13,31,193,9,Cendea de Olza/Oltza Zendea (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-072,13-31-072,15,13,31,072,8,Cintruénigo (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-074,13-31-074,15,13,31,074,9,Cirauqui/Zirauki (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-075,13-31-075,15,13,31,075,2,Ciriza/Ziritza (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-076,13-31-076,15,13,31,076,5,Cizur (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-077,13-31-077,15,13,31,077,1,Corella (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-078,13-31-078,15,13,31,078,7,Cortes (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-079,13-31-079,15,13,31,079,0,Desojo (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-080,13-31-080,15,13,31,080,4,Dicastillo (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-081,13-31-081,15,13,31,081,1,Donamaria (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-221,13-31-221,15,13,31,221,2,Doneztebe/Santesteban (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-083,13-31-083,15,13,31,083,2,Echarri/Etxarri (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-087,13-31-087,15,13,31,087,9,Elgorriaga (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-089,13-31-089,15,13,31,089,8,Enériz/Eneritz (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-090,13-31-090,15,13,31,090,2,Eratsun (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-091,13-31-091,15,13,31,091,9,Ergoiena (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-092,13-31-092,15,13,31,092,4,Erro (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-094,13-31-094,15,13,31,094,5,Eslava (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-095,13-31-095,15,13,31,095,8,Esparza de Salazar/Espartza Zaraitzu (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-096,13-31-096,15,13,31,096,1,Espronceda (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-097,13-31-097,15,13,31,097,7,Estella-Lizarra (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-098,13-31-098,15,13,31,098,3,Esteribar (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-099,13-31-099,15,13,31,099,6,Etayo (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-082,13-31-082,15,13,31,082,6,Etxalar (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-084,13-31-084,15,13,31,084,7,Etxarri Aranatz (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-085,13-31-085,15,13,31,085,0,Etxauri (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-100,13-31-100,15,13,31,100,0,Eulate (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-101,13-31-101,15,13,31,101,7,Ezcabarte (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-093,13-31-093,15,13,31,093,0,Ezcároz/Ezkaroze (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-102,13-31-102,15,13,31,102,2,Ezkurra (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-103,13-31-103,15,13,31,103,8,Ezprogui (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-104,13-31-104,15,13,31,104,3,Falces (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-105,13-31-105,15,13,31,105,6,Fitero (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-106,13-31-106,15,13,31,106,9,Fontellas (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-107,13-31-107,15,13,31,107,5,Funes (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-108,13-31-108,15,13,31,108,1,Fustiñana (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-109,13-31-109,15,13,31,109,4,Galar (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-110,13-31-110,15,13,31,110,8,Gallipienzo/Galipentzu (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-111,13-31-111,15,13,31,111,5,Gallués/Galoze (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-112,13-31-112,15,13,31,112,0,Garaioa (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-113,13-31-113,15,13,31,113,6,Garde (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-114,13-31-114,15,13,31,114,1,Garínoain (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-115,13-31-115,15,13,31,115,4,Garralda (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-116,13-31-116,15,13,31,116,7,Genevilla (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-117,13-31-117,15,13,31,117,3,Goizueta (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-118,13-31-118,15,13,31,118,9,Goñi (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-119,13-31-119,15,13,31,119,2,Güesa/Gorza (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-120,13-31-120,15,13,31,120,6,Guesálaz/Gesalatz (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-121,13-31-121,15,13,31,121,3,Guirguillano (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-256,13-31-256,15,13,31,256,7,Hiriberri/Villanueva de Aezkoa (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-122,13-31-122,15,13,31,122,8,Huarte/Uharte (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-124,13-31-124,15,13,31,124,9,Ibargoiti (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-259,13-31-259,15,13,31,259,2,Igantzi (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-125,13-31-125,15,13,31,125,2,Igúzquiza (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-126,13-31-126,15,13,31,126,5,Imotz (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-127,13-31-127,15,13,31,127,1,Irañeta (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-904,13-31-904,15,13,31,904,5,Irurtzun (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-128,13-31-128,15,13,31,128,7,Isaba/Izaba (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-129,13-31-129,15,13,31,129,0,Ituren (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-130,13-31-130,15,13,31,130,4,Iturmendi (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-131,13-31-131,15,13,31,131,1,Iza/Itza (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-132,13-31-132,15,13,31,132,6,Izagaondoa (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-133,13-31-133,15,13,31,133,2,Izalzu/Itzaltzu (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-134,13-31-134,15,13,31,134,7,Jaurrieta (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-135,13-31-135,15,13,31,135,0,Javier (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-136,13-31-136,15,13,31,136,3,Juslapeña (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-138,13-31-138,15,13,31,138,5,Lakuntza (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-139,13-31-139,15,13,31,139,8,Lana (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-140,13-31-140,15,13,31,140,2,Lantz (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-141,13-31-141,15,13,31,141,9,Lapoblación (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-142,13-31-142,15,13,31,142,4,Larraga (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-143,13-31-143,15,13,31,143,0,Larraona (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-144,13-31-144,15,13,31,144,5,Larraun (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-145,13-31-145,15,13,31,145,8,Lazagurría (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-146,13-31-146,15,13,31,146,1,Leache/Leatxe (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-147,13-31-147,15,13,31,147,7,Legarda (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-148,13-31-148,15,13,31,148,3,Legaria (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-149,13-31-149,15,13,31,149,6,Leitza (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-908,13-31-908,15,13,31,908,3,Lekunberri (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-150,13-31-150,15,13,31,150,9,Leoz/Leotz (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-151,13-31-151,15,13,31,151,6,Lerga (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-152,13-31-152,15,13,31,152,1,Lerín (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-153,13-31-153,15,13,31,153,7,Lesaka (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-154,13-31-154,15,13,31,154,2,Lezaun (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-155,13-31-155,15,13,31,155,5,Liédena (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-156,13-31-156,15,13,31,156,8,Lizoáin-Arriasgoiti (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-157,13-31-157,15,13,31,157,4,Lodosa (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-158,13-31-158,15,13,31,158,0,Lónguida/Longida (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-159,13-31-159,15,13,31,159,3,Lumbier (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-160,13-31-160,15,13,31,160,7,Luquin (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-248,13-31-248,15,13,31,248,2,Luzaide/Valcarlos (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-161,13-31-161,15,13,31,161,4,Mañeru (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-162,13-31-162,15,13,31,162,9,Marañón (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-163,13-31-163,15,13,31,163,5,Marcilla (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-164,13-31-164,15,13,31,164,0,Mélida (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-165,13-31-165,15,13,31,165,3,Mendavia (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-166,13-31-166,15,13,31,166,6,Mendaza (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-167,13-31-167,15,13,31,167,2,Mendigorria (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-168,13-31-168,15,13,31,168,8,Metauten (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-169,13-31-169,15,13,31,169,1,Milagro (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-170,13-31-170,15,13,31,170,5,Mirafuentes (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-171,13-31-171,15,13,31,171,2,Miranda de Arga (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-172,13-31-172,15,13,31,172,7,Monreal/Elo (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-173,13-31-173,15,13,31,173,3,Monteagudo (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-174,13-31-174,15,13,31,174,8,Morentin (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-175,13-31-175,15,13,31,175,1,Mues (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-176,13-31-176,15,13,31,176,4,Murchante (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-177,13-31-177,15,13,31,177,0,Murieta (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-178,13-31-178,15,13,31,178,6,Murillo el Cuende (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-179,13-31-179,15,13,31,179,9,Murillo el Fruto (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-180,13-31-180,15,13,31,180,3,Muruzábal (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-181,13-31-181,15,13,31,181,0,Navascués/Nabaskoze (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-182,13-31-182,15,13,31,182,5,Nazar (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-088,13-31-088,15,13,31,088,5,Noáin (Valle de Elorz)/Noain (Elortzibar) (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-183,13-31-183,15,13,31,183,1,Obanos (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-185,13-31-185,15,13,31,185,9,Ochagavía/Otsagabia (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-184,13-31-184,15,13,31,184,6,Oco (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-186,13-31-186,15,13,31,186,2,Odieta (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-187,13-31-187,15,13,31,187,8,Oiz (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-188,13-31-188,15,13,31,188,4,Olaibar (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-189,13-31-189,15,13,31,189,7,Olazti/Olazagutía (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-190,13-31-190,15,13,31,190,1,Olejua (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-191,13-31-191,15,13,31,191,8,Olite/Erriberri (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-192,13-31-192,15,13,31,192,3,Olóriz/Oloritz (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-195,13-31-195,15,13,31,195,7,Orbaizeta (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-196,13-31-196,15,13,31,196,0,Orbara (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-197,13-31-197,15,13,31,197,6,Orísoain (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-906,13-31-906,15,13,31,906,1,Orkoien (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-198,13-31-198,15,13,31,198,2,Oronz/Orontze (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-199,13-31-199,15,13,31,199,5,Oroz-Betelu/Orotz-Betelu (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-211,13-31-211,15,13,31,211,4,Orreaga/Roncesvalles (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-200,13-31-200,15,13,31,200,9,Oteiza (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-201,13-31-201,15,13,31,201,6,Pamplona/Iruña (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-202,13-31-202,15,13,31,202,1,Peralta/Azkoien (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-203,13-31-203,15,13,31,203,7,Petilla de Aragón (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-204,13-31-204,15,13,31,204,2,Piedramillera (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-205,13-31-205,15,13,31,205,5,Pitillas (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-206,13-31-206,15,13,31,206,8,Puente la Reina/Gares (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-207,13-31-207,15,13,31,207,4,Pueyo (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-208,13-31-208,15,13,31,208,0,Ribaforada (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-209,13-31-209,15,13,31,209,3,Romanzado (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-210,13-31-210,15,13,31,210,7,Roncal/Erronkari (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-212,13-31-212,15,13,31,212,9,Sada (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-213,13-31-213,15,13,31,213,5,Saldías (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-214,13-31-214,15,13,31,214,0,Salinas de Oro/Jaitz (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-215,13-31-215,15,13,31,215,3,San Adrián (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-217,13-31-217,15,13,31,217,2,San Martín de Unx (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-216,13-31-216,15,13,31,216,6,Sangüesa/Zangoza (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-219,13-31-219,15,13,31,219,1,Sansol (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-220,13-31-220,15,13,31,220,5,Santacara (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-222,13-31-222,15,13,31,222,7,Sarriés/Sartze (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-223,13-31-223,15,13,31,223,3,Sartaguda (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-224,13-31-224,15,13,31,224,8,Sesma (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-225,13-31-225,15,13,31,225,1,Sorlada (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-226,13-31-226,15,13,31,226,4,Sunbilla (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-227,13-31-227,15,13,31,227,0,Tafalla (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-228,13-31-228,15,13,31,228,6,Tiebas-Muruarte de Reta (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-229,13-31-229,15,13,31,229,9,Tirapu (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-230,13-31-230,15,13,31,230,3,Torralba del Río (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-231,13-31-231,15,13,31,231,0,Torres del Río (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-232,13-31-232,15,13,31,232,5,Tudela (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-233,13-31-233,15,13,31,233,1,Tulebras (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-234,13-31-234,15,13,31,234,6,Ucar (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-123,13-31-123,15,13,31,123,4,Uharte Arakil (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-235,13-31-235,15,13,31,235,9,Ujué/Uxue (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-236,13-31-236,15,13,31,236,2,Ultzama (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-237,13-31-237,15,13,31,237,8,Unciti (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-238,13-31-238,15,13,31,238,4,Unzué/Untzue (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-239,13-31-239,15,13,31,239,7,Urdazubi/Urdax (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-240,13-31-240,15,13,31,240,1,Urdiain (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-241,13-31-241,15,13,31,241,8,Urraul Alto (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-242,13-31-242,15,13,31,242,3,Urraul Bajo (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-244,13-31-244,15,13,31,244,4,Urroz (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-243,13-31-243,15,13,31,243,9,Urroz-Villa (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-245,13-31-245,15,13,31,245,7,Urzainqui/Urzainki (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-246,13-31-246,15,13,31,246,0,Uterga (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-247,13-31-247,15,13,31,247,6,Uztárroz/Uztarroze (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-086,13-31-086,15,13,31,086,3,Valle de Egüés/Eguesibar (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-194,13-31-194,15,13,31,194,4,Valle de Ollo/Ollaran (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-260,13-31-260,15,13,31,260,6,Valle de Yerri/Deierri (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-249,13-31-249,15,13,31,249,5,Valtierra (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-251,13-31-251,15,13,31,251,5,Viana (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-252,13-31-252,15,13,31,252,0,Vidángoz/Bidankoze (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-254,13-31-254,15,13,31,254,1,Villafranca (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-255,13-31-255,15,13,31,255,4,Villamayor de Monjardín (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-257,13-31-257,15,13,31,257,3,Villatuerta (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-258,13-31-258,15,13,31,258,9,Villava/Atarrabia (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-261,13-31-261,15,13,31,261,3,Yesa (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-262,13-31-262,15,13,31,262,8,Zabalza/Zabaltza (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-073,13-31-073,15,13,31,073,4,Ziordia (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-907,13-31-907,15,13,31,907,7,Zizur Mayor/Zizur Nagusia (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-263,13-31-263,15,13,31,263,4,Zubieta (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-264,13-31-264,15,13,31,264,9,Zugarramurdi (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
+15-31-265,13-31-265,15,13,31,265,2,Zúñiga (Navarra/Nafarroa),Comunidad Foral de Navarra,Navarra/Nafarroa
 12-32-001,11-32-001,12,11,32,001,3,Allariz (Orense/Ourense),Galicia (Galiza),Orense/Ourense
 12-32-002,11-32-002,12,11,32,002,8,Amoeiro (Orense/Ourense),Galicia (Galiza),Orense/Ourense
 12-32-003,11-32-003,12,11,32,003,4,"Arnoia, A (Orense/Ourense)",Galicia (Galiza),Orense/Ourense

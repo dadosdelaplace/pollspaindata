@@ -2,6 +2,10 @@
 "_PACKAGE"
 
 ## usethis namespace: start
+#' @importFrom dplyr between
+#' @importFrom dplyr case_when
+#' @importFrom dplyr if_else
+#' @importFrom dplyr mutate
 #' @importFrom glue glue
 #' @importFrom lubridate as_date
 #' @importFrom purrr map_chr

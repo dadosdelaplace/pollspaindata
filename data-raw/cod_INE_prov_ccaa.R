@@ -95,20 +95,39 @@ cod_INE_ccaa <-
 # ----- muni's codes
 
 cod_INE_mun <-
-  read_csv(file = "./data/cod_INE_mun.csv") |>
-  # Renamee INE cols
-  rename(cod_INE_ccaa = CODAUTO, cod_INE_prov = CPRO,
-         cod_INE_mun = CMUN, cd_INE_mun = DC,
-         mun = NOMBRE) |>
-  left_join(cod_INE_prov_ccaa, by = c("cod_INE_ccaa", "cod_INE_prov")) |>
-  # Create id codes
-  mutate(id_INE_mun =
-           glue("{cod_INE_ccaa}-{cod_INE_prov}-{cod_INE_mun}"),
-         id_MIR_mun =
-           glue("{cod_MIR_ccaa}-{cod_INE_prov}-{cod_INE_mun}")) |>
-  relocate(id_INE_mun, id_MIR_mun, .before = everything()) |>
-  relocate(cod_MIR_ccaa, .after = cod_INE_ccaa) |>
-  mutate("mun" = glue("{mun} ({prov})"))
+  read_csv(file = "./data/cod_INE_mun.csv") # |>
+  # # Renamee INE cols
+  # rename(cod_INE_ccaa = CODAUTO, cod_INE_prov = CPRO,
+  #        cod_INE_mun = CMUN, cd_INE_mun = DC,
+  #        mun = NOMBRE) |>
+  # left_join(cod_INE_prov_ccaa, by = c("cod_INE_ccaa", "cod_INE_prov")) |>
+  # # Create id codes
+  # mutate(id_INE_mun =
+  #          glue("{cod_INE_ccaa}-{cod_INE_prov}-{cod_INE_mun}"),
+  #        id_MIR_mun =
+  #          glue("{cod_MIR_ccaa}-{cod_INE_prov}-{cod_INE_mun}")) |>
+  # relocate(id_INE_mun, id_MIR_mun, .before = everything()) |>
+  # relocate(cod_MIR_ccaa, .after = cod_INE_ccaa) |>
+  # mutate("mun" = glue("{mun} ({prov})"))
+
+# ----- UTF-8 -----
+
+cod_INE_prov_ccaa <-
+  cod_INE_prov_ccaa |>
+  mutate(across(where(is.character), \(x) enc2utf8(x)))
+
+cod_INE_prov <-
+  cod_INE_prov |>
+  mutate(across(where(is.character), \(x) enc2utf8(x)))
+
+cod_INE_ccaa <-
+  cod_INE_ccaa |>
+  mutate(across(where(is.character), \(x) enc2utf8(x)))
+
+cod_INE_mun <-
+  cod_INE_mun |>
+  mutate(across(where(is.character), \(x) enc2utf8(x)))
+
 
 # ----- use data: rda -----
 

@@ -146,3 +146,72 @@
 #' # Load data
 #' data(cod_INE_mun)
 "cod_INE_mun"
+<<<<<<< Updated upstream
+=======
+
+#' @title Dictionary for parties and candidacies
+#'
+#' @description A dataset containing, for each election, the
+#' abbreviation and name for each candidacy, as well as the
+#' national id and province's id. An hexadecimal code is proposed
+#' for the most important candidacies for dataviz purposes.
+#'
+#' @format A tibble with 7 columns:
+#' \itemize{
+#'   \item \code{id_elec}: id of elections (type of elections + date).
+#'   \item \code{abbrev_candidacies}: party abbreviation.
+#'   \item \code{name_candidacies}: party name (at each constituency).
+#'   \item \code{id_candidacies_nat}: national id.
+#'   \item \code{id_candidacies}: id at each constituency.
+#'   \item \code{name_candidacies_nat}: party name (common at
+#'   national level).
+#'   \item \code{color}: hexadecimal (color) code for some parties.
+#' }
+#'
+#' @author Irene Bosque-Gala, Mafalda Gonzalez-Gonzalez and Javier
+#' Alvarez-Liebana.
+#'
+#' @source Data collected from all the election files.
+#' @docType data
+#' @keywords datasets
+#' @name global_dict_parties
+#' @usage data(global_dict_parties)
+#'
+#' @examples
+#' # Load data
+#' data(global_dict_parties)
+"global_dict_parties"
+
+#' @title Surveys data for congress elections
+#'
+#' @description A dataset containing surveys about all the  congress elections
+#' held in Spain.
+#'
+#' @format A data frame with 3475 rows and 72 variables:
+#' \itemize{
+#'   \item \code{id_elec}: election's id constructed from the election code
+#'    and date
+#'   \item \code{polling_firm}: organisation conducting the poll
+#'   \item \code{media}: commissioning organisation / media outlet
+#'   \item \code{fieldwork_start}, \code{fieldwork_end},
+#'         \code{n_field_days}: fieldwork period and its length (days)
+#'   \item \code{sample_size}: sample size of the survey
+#'   \item \code{Lead}: seat difference between the top two parties
+#'   \item Party columns
+#'         \code{PSOE}, \code{PP}, \code{Sumar}, …, \code{UPyD} (60 in total):
+#'         estimated number of seats for each party.
+#' }
+#'
+#' @author Javier Álvarez-Liébana and David Pereiro-Pol.
+#'
+#' @source pending...
+#' @docType data
+#' @keywords datasets
+#' @name historical_surveys
+#' @usage data(historical_surveys)
+#'
+#' @examples
+#' # Load data
+#' data(historical_surveys)
+"historical_surveys"
+>>>>>>> Stashed changes
