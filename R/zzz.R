@@ -14,5 +14,5 @@ utils::globalVariables(c(
   "turnout_1", "turnout_2", "cod_mun_jud_district", "cod_mun_prov_council", "hamilton_seats",
   "webster_seats", "hill_seats", "deans_seats", "adams_seats", "global_dict_parties", "color",
   "name_candidacies_nat", "porc_candidacies_valid", "all_of", "'voters_cere'", "voters_cere",
-  "con"
+  "con", "CEB_results", "apportionment_methods", "total_seats_spain"
 ))

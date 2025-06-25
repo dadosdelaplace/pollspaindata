@@ -17,7 +17,7 @@ for (i in 1:length(dates)) {
 
   summary_tb <-
     summary_election_data(type_elec = "congress",
-                          date = dates, by_parties = TRUE,
+                          date = dates[i], by_parties = TRUE,
                           level = "all",
                           short_version = FALSE,
                           verbose = FALSE) |>
