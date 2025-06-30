@@ -107,49 +107,37 @@ new_polling_data <-
   new_polling_data |>
   filter(!str_detect(str_to_upper(id_survey), "ELECTION"))
 
-# ----- wide -----
-new_polling_data_wide <-
-  new_polling_data |>
-  pivot_wider(names_from = "abbrev_candidacies",
-              values_from = "estimated_voting")
-
-
-# ----- UTF-8 -----
-
-new_polling_data <-
-  new_polling_data |>
-  mutate(across(where(is.character), \(x) enc2utf8(x)))
-
-new_polling_data_wide <-
-  new_polling_data_wide |>
-  mutate(across(where(is.character), \(x) enc2utf8(x)))
 
 # ----- join new data ------
-
-
 
 new_surveys <-
   new_polling_data |>
   anti_join(historical_surveys, by = "id_survey")
 
-# update_surveys <-
-#   historical_surveys |>
-#
+if (nrow(new_surveys) > 0) {
+
+  # ----- wide -----
+  new_surveys_wide <-
+    new_surveys |>
+    pivot_wider(names_from = "abbrev_candidacies",
+                values_from = "estimated_voting")
+
+  # ----- UTF-8 -----
+  new_surveys <-
+    new_surveys |>
+    mutate(across(where(is.character), \(x) enc2utf8(x)))
+  new_surveys_wide <-
+    new_surveys_wide |>
+    mutate(across(where(is.character), \(x) enc2utf8(x)))
+
+  # ----- use data -----
+  usethis::use_data(new_surveys, overwrite = TRUE,
+                    compress = "xz")
+  usethis::use_data(new_surveys_wide, overwrite = TRUE,
+                    compress = "xz")
+
+}
 
 
-# if (!file.exists("data/next_election_polling_data.rda")){
-#
-#   next_election_polling_data <- new_polling_data
-#
-#   usethis::use_data(next_election_polling_data, overwrite = TRUE,
-#                     compress = "xz")
-#
-# } else if (nrow(new_polling_data) > nrow(next_election_polling_data)) {
-#
-#   next_election_polling_data <- new_polling_data
-#
-#
-#   usethis::use_data(next_election_polling_data, overwrite = TRUE,
-#                     compress = "xz")
-#
-# }
+
+
