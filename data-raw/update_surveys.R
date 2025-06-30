@@ -110,9 +110,17 @@ new_polling_data <-
 
 # ----- join new data ------
 
-new_surveys <-
+current_surveys <-
   new_polling_data |>
   anti_join(historical_surveys, by = "id_survey")
+
+url <- "https://raw.githubusercontent.com/dadosdelaplace/pollspaindata/main/inst/extdata/new_surveys/new_surveys.rda"
+temp <- tempfile(fileext = ".rda")
+download.file(url, temp, mode = "wb")
+load(temp)
+new_surveys <-
+  current_surveys |>
+  anti_join(new_surveys, by = "id_survey")
 
 if (nrow(new_surveys) > 0) {
 
