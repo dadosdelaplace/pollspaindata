@@ -7,6 +7,7 @@ library(purrr)
 library(httr)
 library(lubridate)
 library(stringi)
+library(pollspain)
 
 # ----- own functions -----
 
@@ -642,18 +643,25 @@ historical_surveys <- historical_surveys |>
     grepl("^AP$", abbrev_candidacies)                ~ "AP-PDP-PL", # Alianza Popular
     TRUE                                 ~ abbrev_candidacies
   ))
-
 # We have to also check the ones that appear as CDC, UN and PSP
+
+# Create an id for each survey
+# Remove tildes
+historical_surveys <-
+  historical_surveys
 
 historical_surveys <-
   historical_surveys |>
-  mutate("id_survey" =
+  mutate("polling_firm" =
+           str_remove_all(iconv(polling_firm, from = "UTF-8", to = "ASCII//TRANSLIT"),
+                          "'"),
+         "id_survey" =
            paste0(polling_firm, "-", fieldwork_start, "-",
                   fieldwork_end),
          .before = everything()) |>
   select(-Lead)
 
-# Summarise equal surveyus
+# Summarise equal surveys (same pollfirm, same fieldwork date -> same id_survey)
 historical_surveys <-
   historical_surveys |>
   mutate("estimated_voting" = mean(estimated_voting, na.rm = TRUE),
