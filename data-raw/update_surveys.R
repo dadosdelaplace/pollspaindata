@@ -81,7 +81,6 @@ new_polling_data <- new_polling_data |>
     grepl("^EA$|EE", abbrev_candidacies)             ~ "EA-EUE", # Eusko Alkartasuna - Euskal Ezquerra
     grepl("^PA$", abbrev_candidacies)                ~ "PAR", # Partido Aragonés
     grepl("^AP$", abbrev_candidacies)                ~ "AP-PDP-PL", # Alianza Popular
-    grepl("PAD", abbrev_candidacies)                 ~ "PS", # Partido de Acción Democrática? We do not have it in the dictionary
     TRUE                                 ~ abbrev_candidacies
   ))
 
