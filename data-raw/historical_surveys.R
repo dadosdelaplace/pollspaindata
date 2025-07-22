@@ -75,18 +75,32 @@ historical_surveys <- historical_surveys |>
     grepl("PODEMOS", abbrev_candidacies)             ~ "PODEMOS", # Podemos
     grepl("ERC", abbrev_candidacies)                 ~ "ERC", # Esquerra Republiana de Catalunya
     grepl("MAS PAIS", abbrev_candidacies)            ~ "MP", # Más País
-    grepl("JXCAT|JUNTS", abbrev_candidacies)         ~ "JXCAT-JUNTS", # Junts
+    grepl("JXCAT|JUNTS|PDECAT", abbrev_candidacies)  ~ "JXCAT-JUNTS", # Junts
     grepl("BILDU", abbrev_candidacies)               ~ "EH-BILDU", # Bildu
-    grepl("NA+", abbrev_candidacies)                 ~ "NA-SUMA", # Navarra Suma
-    grepl("PDECAT", abbrev_candidacies)              ~ "PDECAT-E-CIU", # Partido Demócratra Europeo Catalán
+    grepl("NA+", abbrev_candidacies)                 ~ "NA-SUMA",
     grepl("^IU$|IU-", abbrev_candidacies)            ~ "IU", #Izquierda Unida
     grepl("NI/IC", abbrev_candidacies)               ~ "ICV", #Iniciativa per Catalunya
     grepl("^EA$|EE", abbrev_candidacies)             ~ "EA-EUE", # Eusko Alkartasuna - Euskal Ezquerra
     grepl("^PA$", abbrev_candidacies)                ~ "PAR", # Partido Aragonés
     grepl("^AP$", abbrev_candidacies)                ~ "AP-PDP-PL", # Alianza Popular
     TRUE                                 ~ abbrev_candidacies
+  )) |> mutate( # Adjustments to use the dictionary
+    abbrev_candidacies = case_when(
+    id_elec == "02-2016-06-26" & abbrev_candidacies == "ERC"        ~ "ERC-CATSI",
+    id_elec == "02-1989-10-29" & abbrev_candidacies == "AP-PDP-PL"  ~ "PP",
+    id_elec == "02-1996-10-29" & abbrev_candidacies == "PAR"        ~ "PP",
+    id_elec == "02-2008-03-09" & abbrev_candidacies == "CC"         ~ "CC-PNC",
+    id_elec == "02-2011-11-20" & abbrev_candidacies == "CC"         ~ "CC-NC",
+    id_elec == "02-2015-12-20" & abbrev_candidacies == "CDC"        ~ "DIL",
+    id_elec == "02-2015-12-20" & abbrev_candidacies == "BNG"        ~ "NOS",
+    id_elec == "02-2016-06-26" & abbrev_candidacies == "DIL"        ~ "CDC",
+    id_elec == "02-2016-06-26" & abbrev_candidacies == "IU"         ~ "PODEMOS",
+    id_elec == "02-2019-04-28" & abbrev_candidacies == "CC-NC"      ~ "CC",
+    id_elec == "02-2023-07-24" & abbrev_candidacies == "CC-NC"      ~ "CC",
+    id_elec == "02-2023-07-24" & abbrev_candidacies == "PODEMOS"    ~ "SUMAR",
+    TRUE                                                            ~ abbrev_candidacies
   ))
-# We have to also check the ones that appear as CDC, UN and PSP
+
 
 # Create an id for each survey
 historical_surveys <-
@@ -97,8 +111,7 @@ historical_surveys <-
          "id_survey" =
            paste0(polling_firm, "-", fieldwork_start, "-",
                   fieldwork_end),
-         .before = everything()) |>
-  select(-Lead)
+         .before = everything())
 
 # Summarise equal surveys (same pollfirm, same fieldwork date -> same id_survey)
 historical_surveys <-
