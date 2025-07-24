@@ -358,3 +358,152 @@
 #' # Load data
 #' data(apportionment_methods)
 "apportionment_methods"
+
+#' @title Surveys data for congress elections in a long format
+#'
+#' @description A dataset containing surveys about all the congress
+#' elections held in Spain.
+#'
+#' @format A tibble with 10 variables:
+#' \itemize{
+#'   \item \code{id_survey}: survey's id constructed from the
+#'   polling firm and the fieldwork dates.
+#'   \item \code{id_elec}: election's id constructed from the
+#'   election code and date.
+#'   \item \code{polling_firm}: polling firm in charge of conducting
+#'   the poll.
+#'   \item \code{media}: media outlet that published the survey.
+#'   \item \code{fieldwork_start}: fieldwork start date.
+#'   \item \code{fieldwork_end}: fieldwork end date.
+#'   \item \code{n_field_days}: length of fieldwork days.
+#'   \item \code{sample_size}: sample size of the survey.
+#'   \item \code{abbrev_candidacies}: party abbreviation.
+#'   \item \code{estimated_voting}: estimated vote.
+#' }
+#'
+#' @author Javier Álvarez-Liébana and David Pereiro-Pol.
+#'
+#' @source Data extracted from press reports published by polling
+#' firms, readily available on open-access pages such as Wikipedia
+#' @docType data
+#' @keywords datasets
+#' @name historical_surveys
+#' @usage data(historical_surveys)
+#'
+#' @examples
+#' # Load data
+#' data(historical_surveys)
+"historical_surveys"
+
+#' @title Surveys data for congress elections in a wide format
+#'
+#' @description A dataset containing surveys about all the congress
+#' elections held in Spain.
+#'
+#' @format A tibble with 10 variables:
+#' \itemize{
+#'   \item \code{id_survey}: survey's id constructed from the
+#'   polling firm and the fieldwork dates.
+#'   \item \code{id_elec}: election's id constructed from the
+#'   election code and date.
+#'   \item \code{polling_firm}: polling firm in charge of conducting
+#'   the poll.
+#'   \item \code{media}: media outlet that published the survey.
+#'   \item \code{fieldwork_start}: fieldwork start date.
+#'   \item \code{fieldwork_end}: fieldwork end date.
+#'   \item \code{n_field_days}: length of fieldwork days.
+#'   \item \code{sample_size}: sample size of the survey.
+#'   \item \code{abbrev_candidacies}: party abbreviation.
+#'   \item \code{estimated_voting}: estimated vote.
+#' }
+#'
+#' @author Javier Álvarez-Liébana and David Pereiro-Pol.
+#'
+#' @source Data extracted from press reports published by polling
+#' firms, readily available on open-access pages such as Wikipedia
+#' @docType data
+#' @keywords datasets
+#' @name historical_surveys_wide
+#' @usage data(historical_surveys_wide)
+#'
+#' @examples
+#' # Load data
+#' data(historical_surveys_wide)
+"historical_surveys_wide"
+
+
+#' @title New surveys data for the next congress elections in a long
+#' format
+#'
+#' @description A dataset containing surveys about the forthcoming
+#' congress elections in Spain, daily updated via Github action
+#'
+#' @format A tibble with 10 variables:
+#' \itemize{
+#'   \item \code{id_survey}: survey's id constructed from the
+#'   polling firm and the fieldwork dates.
+#'   \item \code{id_elec}: election's id constructed from the
+#'   election code and date.
+#'   \item \code{polling_firm}: polling firm in charge of conducting
+#'   the poll.
+#'   \item \code{media}: media outlet that published the survey.
+#'   \item \code{fieldwork_start}: fieldwork start date.
+#'   \item \code{fieldwork_end}: fieldwork end date.
+#'   \item \code{n_field_days}: length of fieldwork days.
+#'   \item \code{sample_size}: sample size of the survey.
+#'   \item \code{abbrev_candidacies}: party abbreviation.
+#'   \item \code{estimated_voting}: estimated vote.
+#' }
+#'
+#' @author Javier Álvarez-Liébana and David Pereiro-Pol.
+#'
+#' @source Data extracted and updated from press reports published by
+#' polling firms, readily available on open-access pages such as
+#' Wikipedia
+#' @docType data
+#' @keywords datasets
+#' @name new_surveys
+#' @usage data(new_surveys)
+#'
+#' @examples
+#' # Load data
+#' data(new_surveys)
+"new_surveys"
+
+#' @title New surveys data for the next congress elections in a long
+#' format
+#'
+#' @description A dataset containing surveys about the forthcoming
+#' congress elections in Spain, daily updated via Github action
+#'
+#' @format A tibble with 10 variables:
+#' \itemize{
+#'   \item \code{id_survey}: survey's id constructed from the
+#'   polling firm and the fieldwork dates.
+#'   \item \code{id_elec}: election's id constructed from the
+#'   election code and date.
+#'   \item \code{polling_firm}: polling firm in charge of conducting
+#'   the poll.
+#'   \item \code{media}: media outlet that published the survey.
+#'   \item \code{fieldwork_start}: fieldwork start date.
+#'   \item \code{fieldwork_end}: fieldwork end date.
+#'   \item \code{n_field_days}: length of fieldwork days.
+#'   \item \code{sample_size}: sample size of the survey.
+#'   \item \code{abbrev_candidacies}: party abbreviation.
+#'   \item \code{estimated_voting}: estimated vote.
+#' }
+#'
+#' @author Javier Álvarez-Liébana and David Pereiro-Pol.
+#'
+#' @source Data extracted and updated from press reports published by
+#' polling firms, readily available on open-access pages such as
+#' Wikipedia
+#' @docType data
+#' @keywords datasets
+#' @name new_surveys_wide
+#' @usage data(new_surveys_wide)
+#'
+#' @examples
+#' # Load data
+#' data(new_surveys_wide)
+"new_surveys_wide"

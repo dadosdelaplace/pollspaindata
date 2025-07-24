@@ -139,12 +139,13 @@ if (nrow(new_surveys) > 0) {
     mutate(across(where(is.character), \(x) enc2utf8(x)))
 
   # ----- save data -----
-  save(new_surveys, file = "inst/extdata/new_surveys/new_surveys.rda",
-       compress = "xz")
-  save(new_surveys_wide, file = "inst/extdata/new_surveys/new_surveys_wide.rda",
-       compress = "xz")
+  usethis::use_data(new_surveys, overwrite = TRUE,
+                    compress = "xz")
+  usethis::use_data(new_surveys_wide, overwrite = TRUE,
+                    compress = "xz")
 
 }
+
 
 
 

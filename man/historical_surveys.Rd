@@ -19,18 +19,45 @@ and date
 \code{PSOE}, \code{PP}, \code{Sumar}, …, \code{UPyD} (60 in total):
 estimated number of seats for each party.
 }
+
+A tibble with 10 variables:
+\itemize{
+\item \code{id_survey}: survey's id constructed from the
+polling firm and the fieldwork dates.
+\item \code{id_elec}: election's id constructed from the
+election code and date.
+\item \code{polling_firm}: polling firm in charge of conducting
+the poll.
+\item \code{media}: media outlet that published the survey.
+\item \code{fieldwork_start}: fieldwork start date.
+\item \code{fieldwork_end}: fieldwork end date.
+\item \code{n_field_days}: length of fieldwork days.
+\item \code{sample_size}: sample size of the survey.
+\item \code{abbrev_candidacies}: party abbreviation.
+\item \code{estimated_voting}: estimated vote.
+}
 }
 \source{
 pending...
+
+Data extracted from press reports published by polling
+firms, readily available on open-access pages such as Wikipedia
 }
 \usage{
+data(historical_surveys)
+
 data(historical_surveys)
 }
 \description{
 A dataset containing surveys about all the  congress elections
 held in Spain.
+
+A dataset containing surveys about all the congress
+elections held in Spain.
 }
 \examples{
+# Load data
+data(historical_surveys)
 # Load data
 data(historical_surveys)
 }
