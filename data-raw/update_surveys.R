@@ -13,12 +13,9 @@ library(pollspain)
 source("./data-raw/preproc_surveys_functions.R")
 
 # ----- historical data -----
-url <- "https://raw.githubusercontent.com/dadosdelaplace/pollspaindata/main/data/historical_surveys.rda"
-temp <- tempfile(fileext = ".rda")
-download.file(url, temp, mode = "wb")
-load(temp)
+
 next_date <-
-  historical_surveys |>
+  pollspaindata::historical_surveys |>
   summarise("max_date" = as_date(max(str_sub(id_elec, start = 4))) + years(4))  |>
   pull(max_date)
 
@@ -55,10 +52,11 @@ new_polling_data <-
   new_polling_data |>
   select(-Lead) |>
   pivot_longer(cols = all_of(party_cols),
-               names_to = "abbrev_candidacies", values_to = "estimated_voting") |>
-  drop_na(estimated_voting)
+               names_to = "abbrev_candidacies", values_to = "estimated_porc_ballots") |>
+  drop_na(estimated_porc_ballots)
 
-new_polling_data <- new_polling_data |>
+new_polling_data <-
+  new_polling_data |>
   mutate(abbrev_candidacies = abbrev_candidacies |>
            str_to_upper() |>
            stri_trans_general("Latin-ASCII") |>
@@ -98,7 +96,7 @@ new_polling_data <-
 # Summarise equal surveys (same pollfirm, same fieldwork date -> same id_survey)
 new_polling_data <-
   new_polling_data |>
-  mutate("estimated_voting" = mean(estimated_voting, na.rm = TRUE),
+  mutate("estimated_porc_ballots" = mean(estimated_porc_ballots, na.rm = TRUE),
          .by = c(id_survey, abbrev_candidacies)) |>
   distinct(id_survey, abbrev_candidacies, .keep_all = TRUE)
 
@@ -107,20 +105,19 @@ new_polling_data <-
   new_polling_data |>
   filter(!str_detect(str_to_upper(id_survey), "ELECTION"))
 
-
 # ----- join new data ------
 
-current_surveys <-
+new_surveys <-
   new_polling_data |>
   anti_join(historical_surveys, by = "id_survey")
 
-url <- "https://raw.githubusercontent.com/dadosdelaplace/pollspaindata/main/inst/extdata/new_surveys/new_surveys.rda"
-temp <- tempfile(fileext = ".rda")
-download.file(url, temp, mode = "wb")
-load(temp)
-new_surveys <-
-  current_surveys |>
-  anti_join(new_surveys, by = "id_survey")
+# url <- "https://raw.githubusercontent.com/dadosdelaplace/pollspaindata/main/data/new_surveys.rda"
+# temp <- tempfile(fileext = ".rda")
+# download.file(url, temp, mode = "wb")
+# load(temp)
+# new_surveys <-
+#   current_surveys |>
+#   anti_join(new_surveys, by = "id_survey")
 
 if (nrow(new_surveys) > 0) {
 
@@ -128,7 +125,9 @@ if (nrow(new_surveys) > 0) {
   new_surveys_wide <-
     new_surveys |>
     pivot_wider(names_from = "abbrev_candidacies",
-                values_from = "estimated_voting")
+                values_from = "estimated_porc_ballots",
+                values_fn = sum,
+                values_fill = 0)
 
   # ----- UTF-8 -----
   new_surveys <-

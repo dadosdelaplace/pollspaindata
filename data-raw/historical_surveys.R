@@ -60,8 +60,8 @@ historical_surveys <- bind_rows(clean_historical_surveys)
 historical_surveys <- historical_surveys |>
   pivot_longer(cols = c(PSOE:TE, Junts:PAD),            # all party columns
                names_to = "abbrev_candidacies",
-               values_to = "estimated_voting") |>
-  drop_na(estimated_voting) |>
+               values_to = "estimated_porc_ballots") |>
+  drop_na(estimated_porc_ballots) |>
   mutate(
     abbrev_candidacies = str_to_upper(abbrev_candidacies) |>
       stri_trans_general("Latin-ASCII") |>
@@ -103,7 +103,7 @@ historical_surveys <-
 # Summarise equal surveys (same pollfirm, same fieldwork date -> same id_survey)
 historical_surveys <-
   historical_surveys |>
-  mutate("estimated_voting" = mean(estimated_voting, na.rm = TRUE),
+  mutate("estimated_porc_ballots" = mean(estimated_porc_ballots, na.rm = TRUE),
          .by = c(id_survey, abbrev_candidacies)) |>
   distinct(id_survey, abbrev_candidacies, .keep_all = TRUE)
 
@@ -111,7 +111,9 @@ historical_surveys <-
 historical_surveys_wide <-
   historical_surveys |>
   pivot_wider(names_from = "abbrev_candidacies",
-              values_from = "estimated_voting")
+              values_from = "estimated_porc_ballots",
+              values_fn = sum,
+              values_fill = 0)
 
 # ----- UTF-8 -----
 
