@@ -23,3 +23,5 @@ cmp <- res %>% select(elec, median, mem_alloc, total_time, method) |>
               values_from = c(median, mem_alloc, total_time),
               names_glue = "{.value}_{method}"
               )
+
+wilcox.test(cmp$median_parquet, cmp$median_rda, paired = TRUE, alternative = "less", exact = FALSE)
