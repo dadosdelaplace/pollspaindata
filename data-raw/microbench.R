@@ -1,9 +1,25 @@
 library(arrow)
 library(bench)
+library(tidyverse)
 
+files_parquet <- list.files("inst/extdata", pattern = "raw_candidacies_poll.+\\.parquet$", recursive = TRUE, full.names = TRUE)
 
-bench::mark(
-  parquet = read_parquet("inst/extdata/raw_candidacies_poll_congress_2004_03.parquet"),
-  rda = { e <- new.env(); load("data/02-congress/02200403/raw_candidacies_poll_congress_2004_03.rda", envir = e); e[[ls(e)[1]]] },
-  iterations = 5, check = FALSE
-)
+files_rda <- list.files("data", pattern = "raw_candidacies.+\\.rda$", recursive = TRUE, full.names = TRUE)
+time_one <- function(path, formato, iterations = 5) {
+  bm <- if (formato == "parquet") {
+    bench::mark(read_parquet(path), iterations = iterations, check = FALSE) |>
+      mutate(elec = str_extract(basename(path), "\\d{4}_\\d{2}"), method = "parquet") }
+  else {
+    bench::mark(load(path), iterations = iterations, check = FALSE) |>
+      mutate(elec = str_extract(basename(path), "\\d{4}_\\d{2}"), method = "rda") }
+  }
+
+res <- bind_rows( map_dfr(files_parquet, ~time_one(.x, "parquet", iterations = 10)),
+                  map_dfr(files_rda, ~time_one(.x, "rda", iterations = 10)) )
+
+cmp <- res %>% select(elec, median, mem_alloc, total_time, method) |>
+  pivot_wider(id_cols = elec,
+              names_from = method,
+              values_from = c(median, mem_alloc, total_time),
+              names_glue = "{.value}_{method}"
+              )
