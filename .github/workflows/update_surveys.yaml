@@ -1,22 +1,13 @@
 # Workflow derived from https://github.com/r-lib/actions/tree/v2/examples
 # Need help debugging build failures? Start at https://github.com/r-lib/actions#where-to-find-help
 
-name: AUpdate surveys
+name: Update surveys
 
 on:
   schedule:
     - cron: '0 3 * * *'
 
   workflow_dispatch:
-    inputs:
-      dry_run:
-        description: "No hacer commit/push"
-        type: boolean
-        default: true
-
-concurrency:
-  group: ${{ github.workflow }}-${{ github.ref }}
-  cancel-in-progress: true
 
 jobs:
   build:
