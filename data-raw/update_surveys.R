@@ -8,7 +8,7 @@ library(glue)
 library(httr)
 library(lubridate)
 library(stringi)
-library(pollspain)
+
 
 source("./data-raw/preproc_surveys_functions.R")
 
@@ -50,7 +50,7 @@ party_cols <- setdiff(party_cols, "Lead")
 
 new_polling_data <-
   new_polling_data |>
-  select(-Lead) |>
+  select(-any_of("Lead")) |>
   pivot_longer(cols = all_of(party_cols),
                names_to = "abbrev_candidacies", values_to = "estimated_porc_ballots") |>
   drop_na(estimated_porc_ballots)
@@ -107,19 +107,18 @@ new_polling_data <-
 
 # ----- join new data ------
 
+url <- "https://raw.githubusercontent.com/dadosdelaplace/pollspaindata/main/data/new_surveys.rda"
+temp <- tempfile(fileext = ".rda")
+download.file(url, temp, mode = "wb")
+current_surveys <- load(temp)
+
 new_surveys <-
   new_polling_data |>
-  anti_join(historical_surveys, by = "id_survey")
-
-# url <- "https://raw.githubusercontent.com/dadosdelaplace/pollspaindata/main/data/new_surveys.rda"
-# temp <- tempfile(fileext = ".rda")
-# download.file(url, temp, mode = "wb")
-# load(temp)
-# new_surveys <-
-#   current_surveys |>
-#   anti_join(new_surveys, by = "id_survey")
+  anti_join(new_surveys, by = "id_survey")
 
 if (nrow(new_surveys) > 0) {
+
+  new_surveys <- new_polling_data
 
   # ----- wide -----
   new_surveys_wide <-
