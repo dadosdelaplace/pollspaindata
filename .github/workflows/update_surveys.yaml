@@ -1,0 +1,42 @@
+# Workflow derived from https://github.com/r-lib/actions/tree/v2/examples
+# Need help debugging build failures? Start at https://github.com/r-lib/actions#where-to-find-help
+
+name: Update surveys
+
+on:
+  schedule:
+    - cron: '0 3 * * *'
+
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: r-lib/actions/setup-r@v2
+        with:
+          r-version: 'release'
+
+      - name: Install dependencies
+        run: |
+          Rscript -e 'install.packages(c("devtools", "remotes"))'
+          Rscript -e 'devtools::install_deps(dependencies = TRUE)'
+
+      - name: Execute update_surveys.R
+        run: |
+          Rscript data-raw/update_surveys.R
+
+      - name: Automatic commit and push
+        uses: stefanzweifel/git-auto-commit-action@v6
+        with:
+          commit_message: 'Update new_surveys'
+          commit_user_name: GitHub Action
+          commit_user_email: actions@github.com
+          push_options: '--force-with-lease'
+
